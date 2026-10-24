@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Valves | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="valveSearch" class="search-input" placeholder="Search check valves...">
+  </div>
+</header>
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Check Valves</h1>
+    <!-- Updated Link -->
+    <a href="valves.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Valves
+    </a>
+  </div>
+</section>
+    </a>
+  </div>
+</section>
+<section id="types">
+  <div class="container">
+    <table class="parts-table" id="valvesTable">
+      <thead><tr><th>Model Number</th><th>Brand</th><th>Description</th><th>Datasheet</th></tr></thead>
+      <tbody>
+        <tr><td class="model-name">DB, DR</td><td>Atos</td><td>Direct, screw-in</td><td><a href="pdfs/C400.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">ADR</td><td>Atos</td><td>Direct, in line</td><td><a href="pdfs/C406.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">ADRL, AGRL</td><td>Atos</td><td>Piloted, in line or subplate</td><td><a href="pdfs/C450.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+<script>
+  const s = document.getElementById('valveSearch');
+  const r = document.querySelectorAll('#valvesTable tbody tr');
+  s.addEventListener('keyup', () => {
+    const f = s.value.toLowerCase();
+    r.forEach(row => row.style.display = row.textContent.toLowerCase().includes(f) ? '' : 'none');
+  });
+</script>
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+</body>
+</html>

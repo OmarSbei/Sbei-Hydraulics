@@ -1,0 +1,9 @@
+/* TEAM */
+  Developer & Designer: Omar Sbei
+  Studio: Sbei Studio
+  Contact: sbeistudio@gmail.com
+  Instagram: @sbei_studio_
+  Site: Damascus, Syria
+
+/* SITE */
+  Standards: HTML5, CSS, JS (RTL & LTR Support)

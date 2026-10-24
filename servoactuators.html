@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Servoactuators | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .parts-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+  .parts-table th { background-color: #333; color: #fff; padding: 15px; text-align: left; }
+  .parts-table td { padding: 15px; border-bottom: 1px solid #ddd; color: #333; }
+  .parts-table tr:hover { background-color: #f9f9f9; }
+  .model-name { font-weight: bold; color: #0056b3; }
+  .search-header { background-color: #222; padding: 20px 0; text-align: center; position: sticky; top: 0; z-index: 100; }
+  .search-input { width: 90%; max-width: 600px; padding: 12px 25px; font-size: 16px; border: none; border-radius: 30px; outline: none; }
+</style>
+</head>
+<body>
+
+<header class="search-header">
+  <div class="container"><input type="text" id="partSearch" class="search-input" placeholder="Search  AZC cylinders..."></div>
+</header>
+
+<section class="hero" style="padding: 40px 0;">
+  <div class="hero-content">
+    <h1>Servoactuators</h1>
+    <p>Smart and compact units that integrate servocylinders and axis control valves to fully manage the motion cycle.</p>
+    <a href="hydraulic-cylinders.html" class="btn">← Back to Cylinders</a>
+  </div>
+</section>
+
+<section class="container" style="padding: 40px 0;">
+  <table class="parts-table" id="partsTable">
+    <thead>
+      <tr><th>Model Number</th><th>Brand</th><th>Bore & Stroke</th><th>Max Pressure</th><th>Datasheet</th></tr>
+    </thead>
+    <tbody>
+     <tr><td class="model-name">AZC servoactuators</td><td>Atos</td><td>Bore Ø
+40 ÷ 200
+mm</td><td>250 bar</td><td><a href="pdfs/FS700.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+
+    </tbody>
+  </table>
+</section>
+
+<script>
+  document.getElementById('partSearch').addEventListener('keyup', function() {
+    const filter = this.value.toLowerCase();
+    document.querySelectorAll('#partsTable tbody tr').forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

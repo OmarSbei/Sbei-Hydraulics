@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic Fittings | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Paste your standard CSS here */
+</style>
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'ATOS', 'Elbow', 'JIC')...">
+  </div>
+</header>
+
+<section class="hero" id="hero" style="padding: 60px 0;">
+  <div class="hero-content">
+    <h1>Hydraulic Fittings</h1>
+    <p>Browse our available models and download technical specifications.</p>
+    <a href="products.html" class="btn">← Back to All Products</a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+    <h2>Available Models & Extra Variations</h2>
+    
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model-name">HS-FT-J8-O8</td>
+          <td>HYSTAR</td>
+          <td>Straight Adapter, 1/2" JIC Male x 1/2" SAE O-Ring Boss (ORB)</td>
+          <td><a href="pdfs/hystar-ft-j8o8.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">E-FT-E90-08</td>
+          <td>ATOS</td>
+          <td>90-Degree Forged Elbow Fitting, Heavy Series Carbon Steel</td>
+          <td><a href="pdfs/atos-fte90-08.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HY-FT-T6-6-6</td>
+          <td>HOYEA</td>
+          <td>Union Tee Fitting, 3/8" JIC All Sides, High Pressure Rated</td>
+          <td><a href="pdfs/hoyea-ft-tee.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">CW-FT-FL45</td>
+          <td>CHIA WANG</td>
+          <td>45-Degree Flange Fitting, Code 61 Split Flange Connection</td>
+          <td><a href="pdfs/chiawang-ft-fl45.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

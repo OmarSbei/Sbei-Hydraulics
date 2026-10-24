@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special & Custom Accumulators | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Table Styles */
+  .parts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .parts-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+  }
+  .parts-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333; 
+  }
+  .parts-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  .model-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3; 
+  }
+
+  /* Search Bar Styles */
+  .search-header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .search-input {
+    width: 90%;
+    max-width: 600px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by custom type, approval, or brand (e.g., 'ASME', 'Food-Grade', 'ATOS')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Special & Custom Accumulators</h1>
+    <!-- Updated Link -->
+    <a href="accumulators.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accumulators
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Designation / Approval</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="model-name">E-BA-ASME-50</td>
+          <td>ATOS (ASME Stamp)</td>
+          <td>Custom Bladder Model meeting North American U-Stamp pressure criteria</td>
+          <td><a href="pdfs/atos-asme-50.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HPA-PED-CE-20</td>
+          <td>HIDROS (CE / PED)</td>
+          <td>Piston Accumulator tailored specifically to European Pressure Equipment Directives</td>
+          <td><a href="pdfs/hidros-ceped-20.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">CW-PD-SILENCER</td>
+          <td>CHIA WANG (Pulsation Dampener)</td>
+          <td>Inline acoustic tuning accumulator block designed to stop system pump vibrations</td>
+          <td><a href="pdfs/chiawang-silencer.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HS-FDA-SS-10</td>
+          <td>HYSTAR (Food & Beverage Grade)</td>
+          <td>Electropolished stainless casing with non-contaminating, FDA-approved internal elastomers</td>
+          <td><a href="pdfs/hystar-fda-10.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HMBA-GBB-STATION</td>
+          <td>HIDROS (Gas Bottle Back-Up)</td>
+          <td>Large capacity customized engineering manifold connecting external nitrogen rack setups</td>
+          <td><a href="pdfs/hidros-gbb-station.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

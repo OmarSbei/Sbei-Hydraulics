@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metal Bellows Accumulators | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Table Styles */
+  .parts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .parts-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+  }
+  .parts-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333; 
+  }
+  .parts-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  .model-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3; 
+  }
+
+  /* Search Bar Styles */
+  .search-header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .search-input {
+    width: 90%;
+    max-width: 600px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'ATOS', 'Inconel', 'Zero-Permeation')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Metal Bellows Accumulators</h1>
+    <!-- Updated Link -->
+    <a href="accumulators.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accumulators
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+
+    
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="model-name">E-MA-02/315</td>
+          <td>ATOS</td>
+          <td>Metal Bellows Accumulator, 2 Liters, 315 bar, Welded Stainless Steel Corrugation</td>
+          <td><a href="pdfs/atos-ema-02.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">E-MA-05/210</td>
+          <td>ATOS</td>
+          <td>Metal Bellows Accumulator, 5 Liters, 210 bar, Zero Permeation Gas Enclosure</td>
+          <td><a href="pdfs/atos-ema-05.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">HMBA-01-350</td>
+          <td>HIDROS</td>
+          <td>Hermetically Sealed Metal Bellows, 1 Liter, 350 bar Extreme Temperature Proof</td>
+          <td><a href="pdfs/hidros-hmba-01.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">E-MA-HT-04/315</td>
+          <td>ATOS</td>
+          <td>Ultra-High Temperature Special Model, Inconel Bellows Element Rated for +200°C</td>
+          <td><a href="pdfs/atos-emaht-04.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HMBA-AERO-02</td>
+          <td>HIDROS</td>
+          <td>Aerospace and Defence Grade Series, High Vibration and High G-force Immune</td>
+          <td><a href="pdfs/hidros-hmbaaero-02.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

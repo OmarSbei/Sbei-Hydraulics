@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic Pumps & Motors | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Styling to match the solid blue button layout from the designs */
+  .view-types-btn {
+    display: inline-block;
+    background-color: #004b87; /* Classic industrial blue */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+  }
+  .view-types-btn:hover {
+    background-color: #003366;
+  }
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container nav-inner">
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li class="dropdown">
+        <a href="#types">Types ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="gear-pumps.html">Gear Pumps</a></li>
+          <li><a href="vane-pumps.html">Vane Pumps</a></li>
+          <li><a href="piston-pumps.html">Piston Pumps</a></li>
+          <li><a href="gear-motors.html">Gear Motors</a></li>
+          <li><a href="vane-motors.html">Vane Motors</a></li>
+          <li><a href="piston-motors.html">Piston Motors</a></li>
+        </ul>
+      </li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Hydraulic Pumps & Motors</h1>
+    <!-- Updated Link -->
+    <a href="index.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Homepage
+    </a>
+  </div>
+</section>
+
+<section id="overview">
+  <div class="container">
+    <h2>Overview</h2>
+    <p>Hydraulic pumps convert mechanical energy into hydraulic energy, while hydraulic motors convert hydraulic energy back into mechanical motion.</p>
+    <p>S&S Hydraulics supplies high-performance pumps and motors for industrial, mobile, and heavy-duty hydraulic applications.</p>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+    <h2>Pump & Motor Types</h2>
+    <div class="types-grid">
+      
+      <div class="card" id="vane-pumps">
+        <img src="vane-pump.jpg" alt="Vane Pump">
+        <h3>Vane Pumps</h3>
+        <p>Quiet and efficient pumps with smooth hydraulic flow.</p>
+        <a href="vane-pumps.html" class="view-types-btn">View Types</a>
+      </div>
+      
+      <div class="card" id="piston-pumps">
+        <img src="piston-pump.jpg" alt="Piston Pump">
+        <h3>Piston Pumps</h3>
+        <p>High-pressure pumps for demanding industrial applications.</p>
+        <a href="piston-pumps.html" class="view-types-btn">View Types</a>
+      </div>
+      
+      <div class="card" id="vane-motors">
+        <img src="vane-motor.jpg" alt="Vane Motor">
+        <h3>Vane Motors</h3>
+        <p>Compact hydraulic motors offering smooth operation.</p>
+        <a href="vane-motors.html" class="view-types-btn">View Types</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section id="brands">
+  <div class="container">
+    <h2>Our Brands</h2>
+    <div class="brand-grid">
+      <a href="https://www.hoyea.com/" target="_blank" class="brand-link"><div class="brand"><h3>HOYEA</h3></div></a>
+      <a href="https://www.chiawang.com.tw/" target="_blank" class="brand-link"><div class="brand"><h3>CHIA WANG</h3></div></a>
+      <a href="https://www.hystar.com.tw/" target="_blank" class="brand-link"><div class="brand"><h3>HYSTAR</h3></div></a>
+      <a href="https://www.atos.com/" target="_blank" class="brand-link"><div class="brand"><h3>ATOS</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-question">What is the difference between a hydraulic pump and a hydraulic motor?</div>
+      <div class="faq-answer">A hydraulic pump creates hydraulic flow, while a hydraulic motor converts hydraulic flow into rotary mechanical motion.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I choose the correct pump or motor?</div>
+      <div class="faq-answer">Selection depends on pressure, flow rate, speed, torque, and the specific application requirements.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you supply replacement pumps and motors?</div>
+      <div class="faq-answer">Yes. We provide complete replacement units as well as technical assistance for selecting compatible hydraulic components.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Need Assistance?</h2>
+    <p>Phone: +963933410300</p>
+    <p>Email: sales@sshydraulics.com</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const answer = item.querySelector(".faq-answer");
+    if (!answer) return;
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="S&S Hydraulics - Get a Free Quote. Hydraulic engineering solutions for your business.">
+  <meta name="keywords" content="Hydraulics, Quote, Engineering, Hydraulic Systems">
+  <meta name="author" content="S&S Hydraulics">
+  <title>Get a Free Quote | S&S Hydraulics</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ 
+  <style>
+    :root {
+      --color-primary: #2563eb;
+      --color-primary-dark: #1d4ed8;
+      --color-navy: #081526;
+      --color-navy-light: #1e3a8a;
+      --color-text: #f8fafc;
+      --color-text-muted: #cbd5e1;
+      --color-accent: #60a5fa;
+      
+      --bg-main: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #1e293b;
+      
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 50px rgba(37, 99, 235, 0.25);
+      
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      
+      --transition-normal: 0.4s ease;
+    }
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ 
+    html {
+      scroll-behavior: smooth;
+    }
+ 
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--bg-main), var(--bg-secondary));
+      color: var(--color-text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+ 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+ 
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+ 
+    /* Header */
+    header {
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(8, 21, 38, 0.6);
+      backdrop-filter: blur(15px);
+    }
+ 
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+ 
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+ 
+    .logo span {
+      color: var(--color-accent);
+    }
+ 
+    .nav-link {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      transition: color var(--transition-normal);
+    }
+ 
+    .nav-link:hover {
+      color: var(--color-accent);
+    }
+ 
+    /* Main Content */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 0;
+    }
+ 
+    .quote-section {
+      max-width: 700px;
+      width: 100%;
+    }
+ 
+    .quote-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+ 
+    .quote-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+      line-height: 1.2;
+    }
+ 
+    .quote-header p {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+ 
+    /* Contact Box */
+    .contact-box {
+      background: var(--bg-card);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+    }
+ 
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+ 
+    .contact-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+ 
+    .contact-icon {
+      font-size: 1.75rem;
+      color: var(--color-accent);
+      flex-shrink: 0;
+      margin-top: 0.25rem;
+    }
+ 
+    .contact-info h3 {
+      font-size: 1.1rem;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+    }
+ 
+    .contact-info p {
+      color: var(--color-text-muted);
+      font-size: 0.95rem;
+    }
+ 
+    .contact-info a {
+      color: var(--color-accent);
+      transition: color var(--transition-normal);
+    }
+ 
+    .contact-info a:hover {
+      color: var(--color-primary-dark);
+    }
+ 
+    /* CTA Button */
+    .cta-button {
+      display: inline-block;
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      color: white;
+      text-align: center;
+      border: none;
+      border-radius: var(--radius-full);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      box-shadow: var(--shadow-glow);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+ 
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 60px rgba(37, 99, 235, 0.4);
+    }
+ 
+    /* Footer */
+    footer {
+      background: rgba(8, 21, 38, 0.8);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem 0;
+      margin-top: auto;
+    }
+ 
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+ 
+    .footer-text {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+ 
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+ 
+    .footer-links a {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      transition: color var(--transition-normal);
+    }
+ 
+    .footer-links a:hover {
+      color: var(--color-accent);
+    }
+ 
+    /* Responsive */
+    @media (max-width: 768px) {
+      .quote-header h1 {
+        font-size: 1.75rem;
+      }
+ 
+      .contact-box {
+        padding: 2rem;
+      }
+ 
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+ 
+      .footer-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">S&S <span>Hydraulics</span></div>
+        <a href="index.html" class="nav-link">← Back to Main</a>
+      </div>
+    </div>
+  </header>
+ 
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <div class="quote-section">
+        <!-- Header -->
+        <div class="quote-header">
+          <h1>Get a Free Quote</h1>
+          <p>Contact our team to discuss your hydraulic engineering needs. We'll provide a personalized quote based on your requirements.</p>
+        </div>
+ 
+        <!-- Contact Information -->
+        <div class="contact-box">
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-info">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:ayman.sbei@yahoo.com">ayman.sbei@yahoo.com</a>
+              </p>
+            </div>
+          </div>
+ 
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+              <h3>Phone</h3>
+              <p>
+                <a href="tel:+963933410300">+963 933 410 300</a>
+              </p>
+            </div>
+          </div>
+ 
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-info">
+              <h3>Office Location</h3>
+              <p>
+                S&S Hydraulics<br>
+                Adra Industrial City - 2nd Engineering Sector 172<br>
+                Damascus, Syria
+              </p>
+            </div>
+          </div>
+ 
+          <div class="contact-item">
+            <div class="contact-icon">🕒</div>
+            <div class="contact-info">
+              <h3>Business Hours</h3>
+              <p>
+                Saturday - Thursday: 10:00 AM - 5:00 PM<br>
+                Friday: Closed
+              </p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- CTA Button -->
+        <button class="cta-button" onclick="location.href='mailto:ayman.sbei@yahoo.com?subject=Free%20Quote%20Request'">
+          ✉️ Send Quote Request via Email
+        </button>
+      </div>
+    </div>
+  </main>
+ 
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          &copy; <span id="year"></span> S&S Hydraulics. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="cookies.html">Cookies Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+ 
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

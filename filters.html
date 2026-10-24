@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic Filters | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'Atos', 'In Line', 'Suction filters')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Hydraulic Filters</h1>
+    <!-- Updated Link -->
+    <a href="accessories.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accessories
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+  
+    
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model-name">FPS</td>
+          <td>Atos</td>
+          <td>High pressure, in line, threaded ports, with or without by-pass. Microfiber     
+          filtering elements</td>
+          <td><a href="pdfs/LF032.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">FPH</td>
+          <td>Atos</td>
+          <td>High pressure, in line, SAE 6000 flanged ports, with or without by-pass. 
+          Microfiber filtering elements</td>
+          <td><a href="pdfs/LF040.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">FPB</td>
+          <td>Atos</td>
+          <td>In line, flange mounting for manifolds, with or without by-pass. Microfiber 
+           filtering elements</td>
+          <td><a href="pdfs/LF080.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">FRS</td>
+          <td>Atos</td>
+          <td>Return line, tank-top, threaded ports, with by-pass. Microfiber or cellulose
+           filtering elements</td>
+          <td><a href="pdfs/LF050.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">FSS</td>
+          <td>Atos</td>
+          <td>Suction filters. Threaded port, wire mesh</td>
+          <td><a href="pdfs/LF060.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">GBF</td>
+          <td>Chia Wang</td>
+          <td>Return Filters GBF/GBF-06G</td>
+          <td><a href="pdfs/G75_Acces.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

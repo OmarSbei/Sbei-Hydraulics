@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directional Valves | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Table Styles */
+  .parts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .parts-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+  }
+  .parts-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333; 
+  }
+  .parts-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  .model-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3; 
+  }
+
+  /* Search Bar Styles */
+  .search-header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .search-input {
+    width: 90%;
+    max-width: 600px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+
+<body>
+
+<!-- LIVE SEARCH BAR -->
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="valveSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'ATOS', '24V', 'DSG')...">
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Directional Valves</h1>
+    <!-- Updated Link -->
+    <a href="valves.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Valves
+    </a>
+  </div>
+</section>
+
+
+<!-- PARTS LIST (TABLE) -->
+<section id="types">
+  <div class="container">
+    <h2>Available Models</h2>
+    
+    <table class="parts-table" id="valvesTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- ATOS Valves -->
+        <tr>
+          <td class="model-name">DHZO-A/AEB/AES, DKZOR-A/AEB/AES</td>
+          <td>ATOS</td>
+          <td>Direct, positive overlap, on-board or off-board driver, without transducer, fieldbus or IO-Link</td>
+          <td><a href="pdfs/FS160.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">DHZE-A, DKZE-A</td>
+          <td>ATOS</td>
+          <td>Direct, positive overlap, off-board driver, without transducer, cURus marked. DIN, AMP, Deutsch or wire connectors</td>
+          <td><a href="pdfs/F150.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">DPZO-A/AEB/AES</td>
+          <td>ATOS</td>
+          <td>Piloted, positive overlap, on-board or off-board driver, without transducer, fieldbus or IO-Link</td>
+          <td><a href="pdfs/FS170.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">DPZE-A</td>
+          <td>ATOS</td>
+          <td>Piloted, positive overlap, off-board driver, without transducer, cURus marked. DIN, AMP, Deutsch or wire connectors</td>
+          <td><a href="pdfs/F171.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">DHZO-A/AEB/AES-060</td>
+          <td>ATOS</td>
+          <td>Direct, zero overlap, on-board or off-board driver, without transducer, fieldbus or IO-Link</td>
+          <td><a href="pdfs/TFS050.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">DHZEM-A</td>
+          <td>ATOS</td>
+          <td>High flow, piloted, positive overlap, off-board driver, without transducer, cURus marked. DIN, AMP, Deutsch or wire connectors</td>
+          <td><a href="pdfs/TF100.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- SEARCH BAR FUNCTIONALITY -->
+<script>
+  // Get the input field and the table body rows
+  const searchInput = document.getElementById('valveSearch');
+  const tableRows = document.querySelectorAll('#valvesTable tbody tr');
+
+  // Listen for every keystroke in the search bar
+  searchInput.addEventListener('keyup', function() {
+    // Convert what the user typed into lowercase for easy matching
+    const filter = searchInput.value.toLowerCase();
+
+    // Loop through all the rows in the table
+    tableRows.forEach(row => {
+      // Get all the text content from the current row and make it lowercase
+      const rowText = row.textContent.toLowerCase();
+
+      // If the row's text includes the search term, show it. Otherwise, hide it.
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

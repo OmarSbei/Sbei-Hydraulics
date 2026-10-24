@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diaphragm Accumulators | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Table Styles */
+  .parts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .parts-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+  }
+  .parts-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333; 
+  }
+  .parts-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  .model-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3; 
+  }
+
+  /* Search Bar Styles */
+  .search-header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .search-input {
+    width: 90%;
+    max-width: 600px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'HIDROS', 'Welded', '0.7L')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Diaphragm Accumulators</h1>
+    <!-- Updated Link -->
+    <a href="accumulators.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accumulators
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+ 
+    
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="model-name">HDA-035-210</td>
+          <td>HIDROS</td>
+          <td>Compact Diaphragm Accumulator, 0.35 Liters, 210 bar, M18x1.5 Gas Connection</td>
+          <td><a href="pdfs/hidros-hda-035.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HDA-075-210</td>
+          <td>HIDROS</td>
+          <td>Compact Diaphragm Accumulator, 0.75 Liters, 210 bar, ECO Elastomer</td>
+          <td><a href="pdfs/hidros-hda-075.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HDA-200-150</td>
+          <td>HIDROS</td>
+          <td>Diaphragm Accumulator, 2.0 Liters, 150 bar, NBR Diaphragm</td>
+          <td><a href="pdfs/hidros-hda-200.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">E-DA-050/210</td>
+          <td>ATOS</td>
+          <td>Diaphragm Accumulator, 0.5 Liters, 210 bar, Threaded Steel Body</td>
+          <td><a href="pdfs/atos-eda-050.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">HS-DA-016</td>
+          <td>HYSTAR</td>
+          <td>Miniature Diaphragm Accumulator, 0.16 Liters, Mobile Machinery Shock Absorber</td>
+          <td><a href="pdfs/hystar-hsda-016.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">CW-DA-10</td>
+          <td>CHIA WANG</td>
+          <td>Diaphragm Shock Accumulator, 1.0 Liter, 210 bar Operational Limit</td>
+          <td><a href="pdfs/chiawang-cwda-10.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">HDA-W-100-210</td>
+          <td>HIDROS</td>
+          <td>Welded (Non-Repairable) Series, 1.0 Liter, Cost-Effective Mobile OEM Variant</td>
+          <td><a href="pdfs/hidros-hdaw-100.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">E-DA-R-130/210</td>
+          <td>ATOS</td>
+          <td>Threaded (Repairable) Series, 1.3 Liters, Bolted Construction for Easy Diaphragm Swap</td>
+          <td><a href="pdfs/atos-edar-130.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

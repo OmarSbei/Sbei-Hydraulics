@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic Accumulators | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="container nav-inner">
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li class="dropdown">
+        <a href="#types">Types ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="bladder.html">Bladder Accumulators</a></li>
+          <li><a href="piston.html">Piston Accumulators</a></li>
+          <li><a href="diaphragm.html">Diaphragm Accumulators</a></li>
+          <li><a href="metal-bellows.html">Metal Bellows Accumulators</a></li>
+          <li><a href="transfer-barrier.html">Transfer Barrier Accumulators</a></li>
+          <li><a href="special.html">Special Purpose Accumulators</a></li>
+        </ul>
+      </li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Hydraulic Accumulators</h1>
+    <!-- Updated Link -->
+    <a href="index.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Homepage
+    </a>
+  </div>
+</section>
+
+
+<section id="overview">
+  <div class="container">
+    <h2>Overview</h2>
+    <p>Hydraulic accumulators store hydraulic energy under pressure, stabilize systems, absorb shocks, and provide emergency power.</p>
+    <p>S&S Hydraulics supplies high-quality hydraulic accumulators for industrial and mobile hydraulic systems.</p>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+    <h2>Accumulator Types</h2>
+    <div class="types-grid">
+      <div class="card" id="bladder"><img src="bladder.jpg"><h3>Bladder Accumulators</h3><p>Fast-response energy storage.</p><a href="bladder.html" class="view-types-btn">View Types</a></div>
+      <div class="card" id="piston"><img src="piston.jpg"><h3>Piston Accumulators</h3><p>High-volume hydraulic storage.</p><a href="piston.html" class="view-types-btn">View Types</a></div>
+      <div class="card" id="diaphragm"><img src="diaphragm.jpg"><h3>Diaphragm Accumulators</h3><p>Compact accumulator design.</p><a href="diaphragm.html" class="view-types-btn">View Types</a></div>
+      <div class="card" id="metal-bellows"><img src="metal-bellows.jpg"><h3>Metal Bellows Accumulators</h3><p>For demanding environments.</p><a href="metal-bellows.html" class="view-types-btn">View Types</a></div>
+      <div class="card" id="transfer-barrier"><img src="transfer-barrier.jpg"><h3>Transfer Barrier Accumulators</h3><p>Fluid separation applications.</p><a href="transfer-barrier.html" class="view-types-btn">View Types</a></div>
+      <div class="card" id="special"><img src="special.jpg"><h3>Special Purpose Accumulators</h3><p>Custom engineered solutions.</p><a href="special.html" class="view-types-btn">View Types</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="brands">
+  <div class="container">
+    <h2>Our Brands</h2>
+    <div class="brand-grid">
+      <a href="https://www.hoyea.com/" target="_blank" class="brand-link"><div class="brand"><h3>HOYEA</h3></div></a>
+      <a href="https://www.chiawang.com.tw/" target="_blank" class="brand-link"><div class="brand"><h3>CHIA WANG</h3></div></a>
+      <a href="https://www.hystar.com.tw/" target="_blank" class="brand-link"><div class="brand"><h3>HYSTAR</h3></div></a>
+      <a href="https://www.atos.com/" target="_blank" class="brand-link"><div class="brand"><h3>ATOS</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-question">What does a hydraulic accumulator do?</div>
+      <div class="faq-answer">It stores potential energy using an external source like compressed nitrogen to maintain system pressure.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How do I select the correct accumulator?</div>
+      <div class="faq-answer">Based on required volume, maximum operational pressure, flow rates, and fluid type.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Can you provide technical support?</div>
+      <div class="faq-answer">Yes, our engineering team can assist with selection, sizing, and replacement configurations.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Need Assistance?</h2>
+    <p>Phone: +963933410300</p>
+    <p>Email: sales@sshydraulics.com</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const answer = item.querySelector(".faq-answer");
+    if (!answer) return;
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+</body>
+</html>

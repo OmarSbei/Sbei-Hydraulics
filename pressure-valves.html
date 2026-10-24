@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressure Control Valves | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="valveSearch" class="search-input" placeholder="Search pressure valves...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Pressure Valves</h1>
+    <!-- Updated Link -->
+    <a href="valves.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Valves
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+    <table class="parts-table" id="valvesTable">
+      <thead>
+        <tr><th>Model Number</th><th>Brand</th><th>Description</th><th>Datasheet</th></tr>
+      </thead>
+      <tbody id="tableBody">
+        <tr><td class="model-name">MRV-01</td><td>Chia Wang</td><td>Modular Relief Valve</td><td><a href="pdfs/mrv-01.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MRV-02-P</td><td>Chia Wang</td><td>Modular Relief Valve</td><td><a href="pdfs/mrv-02-p.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MRV-03</td><td>Chia Wang</td><td>Modular Relief Valve</td><td><a href="pdfs/mrv-03.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MRV-04</td><td>Chia Wang</td><td>Modular Relief Valve</td><td><a href="pdfs/mrv-04.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MRV-06</td><td>Chia Wang</td><td>Modular Relief Valve</td><td><a href="pdfs/mrv-06.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MSRV-02-03</td><td>Chia Wang</td><td>Modular Sequence/Relief Valve</td><td><a href="pdfs/msrv-02-03.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MBR-02</td><td>Chia Wang</td><td>Modular Pressure Reducing Valve</td><td><a href="pdfs/mbr-02.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MBR-03</td><td>Chia Wang</td><td>Modular Pressure Reducing Valve</td><td><a href="pdfs/mbr-03.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MBR-04</td><td>Chia Wang</td><td>Modular Pressure Reducing Valve</td><td><a href="pdfs/mbr-04.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MBR-06</td><td>Chia Wang</td><td>Modular Pressure Reducing Valve</td><td><a href="pdfs/mbr-06.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MBRG-02</td><td>Chia Wang</td><td>Modular Pressure Reducing Valve (Gauge)</td><td><a href="pdfs/mbrg-02.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MBRG-03</td><td>Chia Wang</td><td>Modular Pressure Reducing Valve (Gauge)</td><td><a href="pdfs/mbrg-03.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MSV-02</td><td>Chia Wang</td><td>Modular Sequence Valve</td><td><a href="pdfs/msv-02.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MSV-03P</td><td>Chia Wang</td><td>Modular Sequence Valve</td><td><a href="pdfs/msv-03p.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MCB-02</td><td>Chia Wang</td><td>Modular Counterbalance Valve</td><td><a href="pdfs/mcb-02.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MCB-03</td><td>Chia Wang</td><td>Modular Counterbalance Valve</td><td><a href="pdfs/mcb-03.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MCB-04</td><td>Chia Wang</td><td>Modular Counterbalance Valve</td><td><a href="pdfs/mcb-04.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MCB-06</td><td>Chia Wang</td><td>Modular Counterbalance Valve</td><td><a href="pdfs/mcb-06.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MVCB-02-03</td><td>Chia Wang</td><td>Modular Counterbalance Valve</td><td><a href="pdfs/mvcb-02-03.pdf" class="pdf-btn">View PDF</a></td></tr>
+        <tr><td class="model-name">MSBR-02</td><td>Chia Wang</td><td>Modular Sequence/Reducing Valve</td><td><a href="pdfs/msbr-02.pdf" class="pdf-btn">View PDF</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+  const searchInput = document.getElementById('valveSearch');
+  const tableRows = document.querySelectorAll('#valvesTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+
+</body>
+</html>

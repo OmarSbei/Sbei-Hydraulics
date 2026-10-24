@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S&S Hydraulics | Hydraulic Solutions & Engineering & Systems</title>
+  <meta name="description" content="S&S Hydraulics — a world-class Hydraulic Solutions & Engineering offering precision engineering, testing benches, and hydraulic systems powered by ATOS, Hystar, Chia Wang, and S&S Hydraulic." />
+  <meta name="keywords" content="Hydraulic Solutions & Engineering, hydraulic systems, ATOS, hydraulic pumps, hydraulic valves, hydraulic cylinders, S&S Hydraulics" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="S&S Hydraulics | Hydraulic Solutions & Engineering" />
+  <meta property="og:image" content="https://sbeihydraulics.com/logo.jpg" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta property="og:description" content="World-class Hydraulic Solutions & Engineering. Testing benches, system design, and precision components from the world's leading brands." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sbeihydraulics.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://sbeihydraulics.com" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "S&S Hydraulics",
+    "description": "Hydraulic Solutions & Engineering and systems engineering",
+    "url": "https://sbeihydraulics.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Arabic"]
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      transition: background 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ─── DESIGN TOKENS ────────────────────────────────────────── */
+    :root {
+      --blue: #2563EB;
+      --blue-light: #3B82F6;
+      --blue-dark: #1D4ED8;
+      --gold: #F59E0B;
+      --gold-light: #FCD34D;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.06);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,.15);
+      --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* DARK MODE */
+    [data-theme="dark"] {
+      --bg: #0C0E14;
+      --bg-2: #111520;
+      --bg-3: #161B28;
+      --surface: #1A2035;
+      --surface-2: #1F2640;
+      --border: rgba(255,255,255,0.08);
+      --border-2: rgba(255,255,255,0.14);
+      --text: #F1F5F9;
+      --text-2: #94A3B8;
+      --text-3: #64748B;
+      --steel: #8A9BB0;
+    }
+
+    /* LIGHT MODE */
+    [data-theme="light"] {
+      --bg: #F8FAFC;
+      --bg-2: #FFFFFF;
+      --bg-3: #F1F5F9;
+      --surface: #FFFFFF;
+      --surface-2: #F8FAFC;
+      --border: rgba(0,0,0,0.08);
+      --border-2: rgba(0,0,0,0.14);
+      --text: #0F172A;
+      --text-2: #475569;
+      --text-3: #94A3B8;
+      --steel: #64748B;
+    }
+
+    /* ─── TYPOGRAPHY & LAYOUT UTILITIES ────────────────────────── */
+    h1, h2, h3, h4, h5 { line-height: 1.15; letter-spacing: -0.02em; }
+    p { line-height: 1.7; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section { padding: 80px 0; }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--blue-light); background: rgba(37,99,235,0.12);
+      padding: 6px 14px; border-radius: 100px;
+      border: 1px solid rgba(37,99,235,0.2);
+    }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 800; color: var(--text); margin: 16px 0 16px; }
+    .section-header p { font-size: 16px; color: var(--text-2); max-width: 580px; margin: 0 auto; }
+    .gradient-text {
+      background: linear-gradient(135deg, var(--blue-light) 0%, #818CF8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+    /* ─── BUTTONS ──────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-family: inherit; font-size: 15px; font-weight: 600;
+      padding: 12px 24px; border-radius: var(--radius-md); border: none;
+      cursor: pointer; text-decoration: none; transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--blue); color: #fff;
+      box-shadow: 0 0 0 1px var(--blue-dark), 0 4px 16px rgba(37,99,235,0.35);
+    }
+    .btn-primary:hover {
+      background: var(--blue-light); transform: translateY(-1px);
+      box-shadow: 0 0 0 1px var(--blue-light), 0 8px 24px rgba(37,99,235,0.45);
+    }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border-2);
+    }
+    .btn-ghost:hover { background: var(--surface); transform: translateY(-1px); }
+
+    /* ─── NAVBAR & MEGA / DROPDOWNS ────────────────────────────── */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: all var(--transition);
+      background: transparent;
+    }
+    #navbar.scrolled {
+      background: rgba(12,14,20,0.9);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+    [data-theme="light"] #navbar.scrolled { background: rgba(248,250,252,0.9); }
+    
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px; gap: 16px; width: 100%; max-width: 1200px; margin: auto; padding: 0 20px;
+    }
+    .nav-logo {
+      display: inline-flex; align-items: center; gap: 12px;
+      text-decoration: none; flex-shrink: 0; min-width: 0;
+    }
+    .nav-logo img { height: 36px; width: auto; display: block; border-radius: 6px; flex-shrink: 0; }
+    .nav-logo-text { font-size: 17px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .nav-logo-sub { font-size: 11px; color: var(--text-3); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.2; }
+
+    .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; }
+    .dropdown { position: relative; }
+    .nav-links > li > a {
+      font-size: 14px; font-weight: 600; color: var(--text);
+      text-decoration: none; padding: 6px 10px; border-radius: var(--radius-sm);
+      transition: all var(--transition);
+      display: inline-flex; align-items: center; gap: 4px;
+    }
+    .nav-links > li > a:hover { background: var(--surface); color: var(--blue-light); }
+
+    .dropdown-menu {
+      position: absolute; top: 110%; left: 0;
+      min-width: 200px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: 8px 0; opacity: 0; visibility: hidden;
+      transform: translateY(10px); transition: all var(--transition);
+      box-shadow: var(--shadow-md); z-index: 1000; list-style: none;
+    }
+    .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .dropdown-menu li a {
+      display: block; padding: 10px 16px; color: var(--text-2);
+      text-decoration: none; font-size: 14px; transition: all var(--transition);
+    }
+    .dropdown-menu li a:hover { background: var(--surface-2); color: var(--text); padding-left: 20px; }
+
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+    .theme-toggle {
+      width: 38px; height: 38px; border-radius: var(--radius-sm);
+      background: var(--surface); border: 1px solid var(--border);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      transition: all var(--transition); color: var(--text-2); flex-shrink: 0;
+    }
+    .theme-toggle:hover { background: var(--surface-2); color: var(--text); }
+    
+    .hamburger {
+      display: none; flex-direction: column; gap: 4px;
+      width: 38px; height: 38px; border-radius: var(--radius-sm);
+      background: var(--surface); border: 1px solid var(--border);
+      cursor: pointer; align-items: center; justify-content: center;
+      transition: all var(--transition); flex-shrink: 0;
+    }
+    .hamburger span { width: 16px; height: 2px; background: var(--text-2); border-radius: 1px; transition: all var(--transition); }
+
+    .mobile-menu {
+      display: none; position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+      background: var(--bg); padding: 20px; z-index: 999;
+      flex-direction: column; gap: 8px; overflow-y: auto;
+      border-top: 1px solid var(--border);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a, .mobile-dropdown-btn {
+      font-size: 15px; font-weight: 500; color: var(--text);
+      text-decoration: none; padding: 12px 16px; border-radius: var(--radius-md);
+      background: var(--surface); border: 1px solid var(--border); text-align: left; width: 100%; cursor: pointer;
+    }
+    .mobile-dropdown-content { display: none; flex-direction: column; gap: 4px; padding-left: 12px; }
+    .mobile-dropdown-content.open { display: flex; }
+
+    /* ─── HERO SECTION ─────────────────────────────────────────── */
+    #hero {
+      min-height: 90vh; display: flex; align-items: center;
+      position: relative; overflow: hidden; background: var(--bg); padding-top: 96px; padding-bottom: 60px;
+    }
+    .hero-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 40px 40px; opacity: 0.4;
+    }
+    .hero-glow { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.12; }
+    .hero-glow-1 { width: 400px; height: 400px; background: var(--blue); top: -50px; right: -50px; }
+    .hero-glow-2 { width: 300px; height: 300px; background: #818CF8; bottom: 0; left: -50px; }
+
+    .hero-inner {
+      position: relative; z-index: 1; display: grid; grid-template-columns: 1fr;
+      gap: 40px; align-items: center; width: 100%;
+    }
+    .hero-title {
+      font-size: clamp(32px, 7vw, 64px); font-weight: 900;
+      color: var(--text); line-height: 1.05; letter-spacing: -0.03em; margin: 16px 0;
+    }
+    .hero-desc { font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 32px; max-width: 520px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+    .hero-stats { display: flex; gap: 24px; flex-wrap: wrap; }
+    .hero-stat-num { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -0.03em; }
+    .hero-stat-label { font-size: 13px; color: var(--text-3); margin-top: 2px; }
+    .hero-stat + .hero-stat { padding-left: 24px; border-left: 1px solid var(--border); }
+
+    .hero-visual { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; }
+    .circuit-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-xl); padding: 20px; box-shadow: var(--shadow-lg); width: 100%; position: relative; overflow: hidden;
+    }
+    .circuit-path { stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+    .circuit-path.animated { animation: drawPath 3s ease forwards; }
+    @keyframes drawPath { to { stroke-dashoffset: 0; } }
+
+    /* ─── PARTNERS STRIP ───────────────────────────────────────── */
+    #partners {
+      padding: 36px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg-2); overflow: hidden;
+    }
+    .partners-label {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--text-3); text-align: center; margin-bottom: 24px;
+    }
+    .partners-track-wrap { overflow: hidden; width: 100%; }
+    .partners-track { display: flex; gap: 0; width: max-content; animation: marquee 24s linear infinite; }
+    .partners-track:hover { animation-play-state: paused; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .partner-item {
+      display: flex; align-items: center; justify-content: center; padding: 0 32px; height: 48px;
+      flex-shrink: 0; border-right: 1px solid var(--border);
+    }
+    .partner-name { font-size: 14px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-3); white-space: nowrap; }
+
+    /* ─── SERVICES ─────────────────────────────────────────────── */
+    #services { background: var(--bg); }
+    .services-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .service-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); padding: 28px 24px; transition: all var(--transition);
+      position: relative; overflow: hidden;
+    }
+    .service-card:hover { border-color: var(--border-2); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .service-icon {
+      width: 48px; height: 48px; border-radius: var(--radius-md);
+      background: rgba(37,99,235,0.12); border: 1px solid rgba(37,99,235,0.2);
+      display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 22px;
+    }
+    .service-card h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .service-card p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+    .service-card ul { list-style: none; margin-top: 16px; }
+    .service-card ul li {
+      font-size: 13px; color: var(--text-2); padding: 5px 0;
+      display: flex; align-items: center; gap: 8px; border-top: 1px solid var(--border);
+    }
+    .service-card ul li::before { content: '›'; color: var(--blue-light); font-size: 15px; }
+
+    /* ─── HOW IT WORKS ─────────────────────────────────────────── */
+    #how { background: var(--bg-2); }
+    .how-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+    .how-steps { display: flex; flex-direction: column; }
+    .how-step {
+      display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border); transition: all var(--transition);
+    }
+    .how-step:last-child { border-bottom: none; }
+    .how-step-num {
+      width: 36px; height: 36px; flex-shrink: 0; border-radius: var(--radius-sm);
+      background: var(--surface); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: var(--text-3);
+    }
+    .how-step-body h4 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .how-step-body p { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+    .how-visual { display: none; }
+
+    /* ─── STATS BANNER ─────────────────────────────────────────── */
+    #stats { background: var(--blue); padding: 60px 0; }
+    .stats-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: clamp(32px, 8vw, 48px); font-weight: 900; color: #fff; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
+    .stat-label { font-size: 15px; color: rgba(255,255,255,0.75); font-weight: 500; }
+
+    /* ─── TEAM ─────────────────────────────────────────────────── */
+#team { background: var(--bg-2); }
+.team-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+
+/* Card container — keep overflow:hidden so corners stay rounded,
+   but don't force a fixed inner height. The image will set the height. */
+.team-card {
+  background: var(--surface);
+  border: 3px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover */
+.team-card:hover {
+  border-color: rgba(37,99,235,0.4);
+  transform: translateY(-2px);
+}
+
+/* Avatar wrapper — DO NOT force a fixed height here.
+   Use it only as a container for the image. */
+.team-avatar {
+  width: 100%;
+  background: transparent; /* remove forced gradient height */
+  display: block;
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+/* The image itself — full width, natural height (no cropping).
+   Match the card's top corners so rounded look is preserved. */
+.team-avatar .team-photo,
+.team-photo {
+  display: block;
+  width: 100%;
+  height: 100%;             /* preserve original aspect ratio */
+  object-fit: unset;        /* ensure no cover/cropping behavior */
+  object-position: center;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+.team-body { padding: 20px 16px; }
+.team-body h4 { font-size: 19px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.team-role { font-size: 13px; color: var(--blue-light); font-weight: 600; margin-bottom: 8px; }
+.team-body p { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+    /* ─── FAQ ──────────────────────────────────────────────────── */
+    #faq { background: var(--bg); }
+    .faq-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .faq-q {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 18px 20px; cursor: pointer; gap: 12px; transition: background var(--transition);
+    }
+    .faq-q:hover { background: var(--surface-2); }
+    .faq-q span { font-size: 15px; font-weight: 600; color: var(--text); }
+    .faq-icon {
+      width: 24px; height: 24px; flex-shrink: 0; border-radius: 50%;
+      background: var(--bg-3); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 16px; color: var(--text-3); transition: all var(--transition);
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--blue); color: #fff; border-color: var(--blue); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .faq-item.open .faq-a { max-height: 400px; }
+    .faq-a-inner { padding: 0 20px 20px; font-size: 14px; color: var(--text-2); line-height: 1.7; }
+
+    /* ─── CONTACT SECTION ──────────────────────────────────────── */
+    #contact { background: var(--bg-2); }
+    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: start; }
+    .contact-info h2 { font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 12px; }
+    .contact-info p { font-size: 15px; color: var(--text-2); margin-bottom: 30px; line-height: 1.7; }
+    .contact-item { display: flex; gap: 14px; margin-bottom: 20px; }
+    .contact-icon {
+      width: 40px; height: 40px; border-radius: var(--radius-md);
+      background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.2);
+      display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+    }
+    .contact-item-label { font-size: 13px; color: var(--text-3); font-weight: 600; margin-bottom: 2px; }
+    .contact-item-val { font-size: 14px; color: var(--text); font-weight: 600; word-break: break-word; }
+    
+    .contact-form { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--text-2); }
+    .form-group input, .form-group select, .form-group textarea {
+      font-family: inherit; font-size: 14px; color: var(--text);
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+      padding: 12px 14px; transition: border-color var(--transition); outline: none; width: 100%;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-group select option { background: var(--bg); }
+
+    /* ─── CTA BANNER ───────────────────────────────────────────── */
+    #cta { padding: 60px 0; background: var(--bg); }
+    .cta-card {
+      background: linear-gradient(135deg, #1D2A4A 0%, #0F1629 100%);
+      border: 1px solid rgba(37,99,235,0.3); border-radius: var(--radius-xl);
+      padding: 40px 24px; text-align: center; position: relative; overflow: hidden;
+    }
+    [data-theme="light"] .cta-card {
+      background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+      border-color: rgba(37,99,235,0.2);
+    }
+    .cta-card h2 { font-size: clamp(24px, 5vw, 36px); font-weight: 900; color: #fff; margin-bottom: 16px; }
+    [data-theme="light"] .cta-card h2 { color: var(--text); }
+    .cta-card p { font-size: 15px; color: rgba(255,255,255,0.75); margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    [data-theme="light"] .cta-card p { color: var(--text-2); }
+    .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
+    .btn-white {
+      background: #fff; color: #0F172A; font-size: 15px; font-weight: 700;
+      padding: 14px 28px; border-radius: var(--radius-md); border: none;
+      cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      transition: all var(--transition); box-shadow: 0 4px 16px rgba(0,0,0,0.2); width: 100%;
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.3); }
+
+    /* ─── FOOTER ───────────────────────────────────────────────── */
+    #footer { background: var(--bg-2); border-top: 1px solid var(--border); padding: 50px 0 30px; }
+    .footer-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 40px; }
+    .footer-brand p { font-size: 14px; color: var(--text-2); line-height: 1.7; margin-top: 12px; max-width: 100%; }
+    .footer-col h5 { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 14px; color: var(--text-2); text-decoration: none; transition: color var(--transition); }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-bottom {
+      padding-top: 24px; border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-legal { font-size: 13px; color: var(--text-3); }
+    .footer-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+    .footer-badge {
+      font-size: 11px; font-weight: 600; padding: 4px 10px;
+      border-radius: 100px; background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    }
+
+    /* ─── FLOATING WIDGETS & REVEAL ────────────────────────────── */
+    .fab {
+      position: fixed; bottom: 20px; right: 20px; z-index: 500;
+      display: flex; align-items: center; gap: 8px; background: var(--blue); color: #fff;
+      padding: 12px 18px; border-radius: 100px; font-size: 14px; font-weight: 700; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(37,99,235,0.45); transition: all var(--transition);
+    }
+    .fab:hover { background: var(--blue-light); transform: translateY(-3px); }
+    .fab-dot { width: 7px; height: 7px; border-radius: 50%; background: #10B981; }
+
+    #back-top {
+      position: fixed; bottom: 20px; left: 20px; z-index: 500;
+      width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--surface); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: all var(--transition);
+      color: var(--text-2); font-size: 16px; visibility: hidden;
+    }
+    #back-top.visible { opacity: 1; visibility: visible; }
+    #back-top:hover { background: var(--surface-2); color: var(--text); }
+
+    .reveal {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── RESPONSIVE MEDIA QUERIES FOR TABLET & DESKTOP ──────────── */
+    @media (min-width: 768px) {
+      .container { padding: 0 24px; }
+      .section { padding: 100px 0; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .team-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+      .faq-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .form-row { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr 1fr; gap: 60px; }
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+      .cta-card { padding: 60px 40px; }
+      .btn-white { width: auto; }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-inner { grid-template-columns: 1.1fr 0.9fr; gap: 60px; }
+      .hero-visual { display: flex; }
+      .services-grid { grid-template-columns: repeat(3, 1fr); }
+      .team-grid { grid-template-columns: repeat(3, 1fr); }
+      .how-grid { grid-template-columns: 1fr 1fr; gap: 80px; }
+      .how-visual { display: block; position: sticky; top: 100px; }
+      .nav-links { display: flex; }
+      .hamburger { display: none; }
+      .nav-actions .btn { display: inline-flex; }
+    }
+
+    @media (max-width: 1023px) {
+      .nav-links, .nav-actions .btn { display: none; }
+      .hamburger { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar" role="navigation" aria-label="Main Navigation">
+  <div class="nav-inner">
+    <a href="logo.jpg" class="nav-logo" aria-label="Home - S&S Hydraulics">
+      <img src="logo.jpg" width="160" height="40" alt="S&S Hydraulics Logo">
+      <div>
+        <div class="nav-logo-text">S&S Hydraulics</div>
+        <div class="nav-logo-sub">Engineering the Future</div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="#services">Products ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="power-units.html">Power Units</a></li>
+          <li><a href="valves.html">Valves</a></li>
+          <li><a href="hydraulic-cylinders.html">Cylinders</a></li>
+          <li><a href="pumps-motors.html">Pumps & Motors</a></li>
+          <li><a href="accumulators.html">Accumulators</a></li>
+          <li><a href="accessories.html">Accessories</a></li> 
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#services">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#services">Testing Center</a></li>
+          <li><a href="#services">System Design</a></li>
+          <li><a href="#services">Training & Certification</a></li>
+          <li><a href="#services">Repair & Maintenance</a></li>
+          <li><a href="#services">Test Bench Manufacturing</a></li>
+          <li><a href="#services">Parts & Components Supply</a></li>
+        </ul>
+      </li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Language Switcher Button -->
+      <a href="arabic.html" class="lang-btn btn-ghost" style="padding: 6px 12px; font-size: 13px; font-weight: 600; text-decoration: none;" aria-label="Switch to Arabic">
+        🌐 العربية
+      </a>
+
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark and Light Mode">
+        <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg id="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <a href="#contact" class="btn btn-primary" style="padding:8px 16px; font-size:13px;">Get a Quote</a>
+      
+      <button class="hamburger" id="hamburger" aria-label="Open Mobile Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Drawer -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile Navigation">
+  <button class="mobile-dropdown-btn" onclick="toggleMobileDropdown('mob-products')">Products ▾</button>
+  <div class="mobile-dropdown-content" id="mob-products">
+    <a href="power-units.html" onclick="closeMobile()">Power Units</a>
+    <a href="valves.html" onclick="closeMobile()">Valves</a>
+    <a href="hydraulic-cylinders.html" onclick="closeMobile()">Cylinders</a>
+    <a href="pumps-motors.html" onclick="closeMobile()">Pumps & Motors</a>
+    <a href="accumulators.html" onclick="closeMobile()">Accumulators</a>
+    <a href="accessories.html" onclick="closeMobile()">Accessories</a>
+  </div>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#team" onclick="closeMobile()">Team</a>
+  <a href="#faq" onclick="closeMobile()">FAQ</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="arabic.html" onclick="closeMobile()" class="btn btn-ghost" style="justify-content:center; margin-top:4px;">🌐 النسخة العربية</a>
+  <a href="#contact" onclick="closeMobile()" class="btn btn-primary" style="justify-content:center; margin-top:8px;">Get a Quote →</a>
+</div>
+
+
+<!-- ═══════════ HERO ═══════════ -->
+<section id="hero" aria-labelledby="hero-title">
+  <div class="hero-bg">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+       
+        <h1 class="hero-title reveal reveal-delay-1" id="hero-title">
+          Innovation<br><span class="gradient-text">Through</span><br>Pressure.
+        </h1>
+        <p class="hero-desc reveal reveal-delay-2">
+          S&S Hydraulics delivers world-class precision systems, testing benches, and engineering solutions trusted by industry professionals globally.
+        </p>
+        <div class="hero-actions reveal reveal-delay-3">
+          <a href="#contact" class="btn btn-primary">
+            Get a Quote
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#team" class="btn btn-ghost">Meet Our Team</a>
+        </div>
+        <div class="hero-stats reveal reveal-delay-4" role="list" aria-label="Company Statistics">
+          <div class="hero-stat" role="listitem">
+            <div class="hero-stat-num">+20</div>
+            <div class="hero-stat-label">Years of Experience</div>
+          </div>
+          <div class="hero-stat" role="listitem">
+            <div class="hero-stat-num">+500</div>
+            <div class="hero-stat-label">Installed Systems</div>
+          </div>
+          <div class="hero-stat" role="listitem">
+            <div class="hero-stat-num">4</div>
+            <div class="hero-stat-label">Global Partners</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay-2">
+         <!-- Preserved structure -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PARTNERS STRIP ═══════════ -->
+<section id="partners" aria-labelledby="partners-heading">
+  <div class="partners-label" id="partners-heading">Trusted Brand Partners</div>
+  <div class="partners-track-wrap">
+    <div class="partners-track" aria-label="Animated Partner Brands List">
+      <div class="partner-item"><span class="partner-name">ATOS</span></div>
+      <div class="partner-item"><span class="partner-name">CHIA WANG</span></div>
+      <div class="partner-item"><span class="partner-name">S&S HYDRAULICS</span></div>
+      <div class="partner-item"><span class="partner-name">Hystar</span></div>
+      <!-- Loop repeat -->
+      <div class="partner-item"><span class="partner-name">ATOS</span></div>
+      <div class="partner-item"><span class="partner-name">CHIA WANG</span></div>
+      <div class="partner-item"><span class="partner-name">S&S HYDRAULICS</span></div>
+      <div class="partner-item"><span class="partner-name">Hystar</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section id="services" class="section" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">What We Do</span>
+      <h2 id="services-heading">Complete <span class="gradient-text">Hydraulic Solutions</span></h2>
+      <p>From design and testing to installation and training — we deliver full-scope hydraulic expertise.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal reveal-delay-1">
+        <div class="service-icon" aria-hidden="true">🔬</div>
+        <h3>Hydraulic Testing Center</h3>
+        <p>Advanced testing benches for pumps, motors, valves, and cylinders fully compliant with ISO 4401 standards.</p>
+        <ul aria-label="Lab Services List">
+          <li>Pump & motor performance testing</li>
+          <li>Valve flow & leakage inspection</li>
+          <li>Cylinder efficiency analysis</li>
+          <li>Contamination reports (ISO 4406)</li>
+        </ul>
+      </article>
+      <article class="service-card reveal reveal-delay-2">
+        <div class="service-icon" aria-hidden="true">⚙️</div>
+        <h3>System Design & Engineering</h3>
+        <p>Custom hydraulic circuit design, manifold block engineering, and power unit assembly by certified experts.</p>
+        <ul aria-label="Engineering Services List">
+          <li>ISO 1219 compliant circuit schematics</li>
+          <li>Manifold block configuration</li>
+          <li>HPU design & assembly</li>
+          <li>Electro-hydraulic controls</li>
+        </ul>
+      </article>
+      <article class="service-card reveal reveal-delay-3">
+        <div class="service-icon" aria-hidden="true">🎓</div>
+        <h3>Training & Certification</h3>
+        <p>Professional hydraulic training modules ranging from beginner fundamentals to advanced proportional controls.</p>
+        <ul aria-label="Training Services List">
+          <li>Basic hydraulic principles</li>
+          <li>Electro-hydraulics mechanics</li>
+          <li>Troubleshooting & maintenance</li>
+          <li>Field setup & workshops</li>
+        </ul>
+      </article>
+      <article class="service-card reveal reveal-delay-4">
+        <div class="service-icon" aria-hidden="true">🔧</div>
+        <h3>Repair & Maintenance</h3>
+        <p>Comprehensive diagnostic, overhaul, and preventative maintenance services for all major hydraulic systems and components.</p>
+        <ul aria-label="Repair Services List">
+          <li>Component overhaul & testing</li>
+          <li>Preventative maintenance plans</li>
+          <li>Emergency troubleshooting</li>
+          <li>Seal & fluid replacement</li>
+        </ul>
+      </article>
+      <article class="service-card reveal reveal-delay-5">
+        <div class="service-icon" aria-hidden="true">🛠️</div>
+        <h3>Test Bench Manufacturing</h3>
+        <p>High-precision, custom-built test benches designed for rigorous verification of pumps, valves, and cylinders.</p>
+        <ul aria-label="Test Bench Manufacturing List">
+          <li>Custom hydraulic test benches</li>
+          <li>Data acquisition integration</li>
+          <li>Custom pressure & flow ratings</li>
+          <li>Safety-compliant builds</li>
+        </ul>
+      </article>
+      <article class="service-card reveal reveal-delay-6">
+        <div class="service-icon" aria-hidden="true">📦</div>
+        <h3>Parts & Components Supply</h3>
+        <p>Direct supply of genuine valves, pumps, motors, and accessories from leading industry manufacturers.</p>
+        <ul aria-label="Parts Supply List">
+          <li>Pumps, motors, and valves</li>
+          <li>Seals, hoses, and fittings</li>
+          <li>Authorized brand distribution</li>
+          <li>Fast local or global shipping</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HOW IT WORKS ═══════════ -->
+<section id="how" class="section" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">Our Process</span>
+      <h2 id="how-heading">From Concept to <span class="gradient-text">Commissioning</span></h2>
+      <p>A structured 5-step engineering framework ensuring the highest safety and operational standards.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-steps">
+        <div class="how-step reveal">
+          <div class="how-step-num" aria-hidden="true">01</div>
+          <div class="how-step-body">
+            <h4>Requirement Analysis</h4>
+            <p>We evaluate load profiles, operating environments, and compliance factors per ISO 4413.</p>
+          </div>
+        </div>
+        <div class="how-step reveal reveal-delay-1">
+          <div class="how-step-num" aria-hidden="true">02</div>
+          <div class="how-step-body">
+            <h4>Circuit Design & Simulation</h4>
+            <p>Drafting ISO 1219 compliant systems and pre-simulating fluid behavior under pressure.</p>
+          </div>
+        </div>
+        <div class="how-step reveal reveal-delay-2">
+          <div class="how-step-num" aria-hidden="true">03</div>
+          <div class="how-step-body">
+            <h4>Component Sourcing</h4>
+            <p>Sourcing direct components from trusted brands like ATOS, Chia Wang, Hoyea, and S&S Hydraulics.</p>
+          </div>
+        </div>
+        <div class="how-step reveal reveal-delay-3">
+          <div class="how-step-num" aria-hidden="true">04</div>
+          <div class="how-step-body">
+            <h4>Assembly & Testing</h4>
+            <p>Cleanroom assembly followed by functional verification and stress testing on certified test benches.</p>
+          </div>
+        </div>
+        <div class="how-step reveal reveal-delay-4">
+          <div class="how-step-num" aria-hidden="true">05</div>
+          <div class="how-step-body">
+            <h4>Commissioning & Support</h4>
+            <p>On-site installation, team briefing & orientation, and comprehensive warranty coverage.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Diagram Column -->
+      <div class="how-visual">
+        <div class="circuit-card">
+          <div class="hpu-graphic">
+            <svg viewBox="0 0 400 450" class="hpu-svg" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
+              <g transform="translate(130, 20)">
+                <rect width="140" height="60" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="2"/>
+                <text x="70" y="25" fill="#94a3b8" font-size="10" text-anchor="middle" font-family="sans-serif">ELECTRIC MOTOR</text>
+                <text x="70" y="45" fill="#ffffff" font-size="18" font-weight="bold" text-anchor="middle" font-family="sans-serif">M</text>
+              </g>
+              <line x1="200" y1="80" x2="200" y2="130" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4"/>
+              <g transform="translate(200, 160)">
+                <circle r="35" fill="#0f172a" stroke="#0ea5e9" stroke-width="2"/>
+                <path d="M-15 0 L15 0 M5 -10 L15 0 L5 10" fill="none" stroke="#38bdf8" stroke-width="2"/>
+                <text x="0" y="50" fill="#94a3b8" font-size="11" text-anchor="middle" font-family="sans-serif">PUMP</text>
+              </g>
+              <g transform="translate(310, 150)">
+                <circle cx="20" cy="20" r="18" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+                <text x="20" y="16" fill="#10b981" font-size="8" text-anchor="middle" font-weight="bold">GAUGE</text>
+                <path d="M12 25 L20 15 L28 25" fill="none" stroke="#10b981" stroke-width="1.5"/>
+              </g>
+              <g transform="translate(360, 150)">
+                <rect x="0" y="5" width="24" height="30" rx="4" fill="#0f172a" stroke="#f59e0b" stroke-width="2"/>
+                <text x="12" y="23" fill="#f59e0b" font-size="9" text-anchor="middle" font-weight="bold">PRV</text>
+              </g>
+              <path d="M235 160 L290 160" fill="none" stroke="#38bdf8" stroke-width="2"/>
+              <text x="260" y="152" fill="#38bdf8" font-size="9">P-line</text>
+              <g transform="translate(100, 230)">
+                <rect width="200" height="170" rx="8" fill="rgba(15, 23, 42, 0.6)" stroke="#2563eb" stroke-width="2"/>
+                <text x="100" y="155" fill="#3b82f6" font-size="11" font-weight="bold" text-anchor="middle" font-family="sans-serif">HYDRAULIC RESERVOIR</text>
+                <text x="15" y="25" fill="#64748b" font-size="10">OIL</text>
+                <g transform="translate(75, 40)">
+                  <rect width="50" height="80" rx="4" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+                  <line x1="10" y1="15" x2="40" y2="15" stroke="#f59e0b" stroke-width="2"/>
+                  <line x1="10" y1="30" x2="40" y2="30" stroke="#f59e0b" stroke-width="2"/>
+                  <line x1="10" y1="45" x2="40" y2="45" stroke="#f59e0b" stroke-width="2"/>
+                  <line x1="10" y1="60" x2="40" y2="60" stroke="#f59e0b" stroke-width="2"/>
+                  <text x="25" y="75" fill="#f59e0b" font-size="9" text-anchor="middle" font-weight="bold">FILTER</text>
+                </g>
+              </g>
+              <path d="M175 230 L175 185 L185 185" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ STATS BANNER ═══════════ -->
+<section id="stats" aria-labelledby="stats-heading">
+  <div class="container">
+    <h2 id="stats-heading" class="visually-hidden">Company Statistics</h2>
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num">+500</div>
+        <div class="stat-label">Installed Systems</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-1">
+        <div class="stat-num">+20</div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-item reveal reveal-delay-2">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Global Partners</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TEAM ═══════════ -->
+<section id="team" class="section" aria-labelledby="team-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">Our Experts</span>
+      <h2 id="team-heading">Meet The <span class="gradient-text">Team</span></h2>
+      <p>Certified hydraulic engineering professionals with extensive hands-on industry experience.</p>
+    </div>
+    <div class="team-grid">
+  <article class="team-card">
+    <div class="team-avatar">
+      <img src="ayman.jpg" alt="Eng. Ayman Al Sbei" class="team-photo">   <!-- no crop -->
+    </div>
+    <div class="team-body">
+      <h4>Eng. Ayman Al Sbei</h4>
+      <div class="team-role">Chief Engineer</div>
+      <p><a href="tel:+963933336220">+963 933336220</a></p>
+    </div>
+  </article>
+
+  <article class="team-card">
+    <div class="team-avatar">
+      <img src="fawaz.jpg" alt="Eng. Fawaz Al Sbei" class="team-photo crop"> <!-- ALLOW cropping -->
+    </div>
+    <div class="team-body">
+      <h4>Eng. Fawaz Al Sbei</h4>
+      <div class="team-role">Electrical Engineer</div>
+      <p><a href="tel:+963933445400">+963 933445400</a></p>
+    </div>
+  </article>
+
+  <article class="team-card">
+    <div class="team-avatar">
+      <img src="anas.jpg" alt="Anas Al Sbei" class="team-photo crop"> <!-- ALLOW cropping -->
+    </div>
+    <div class="team-body">
+      <h4>Anas Al Sbei</h4>
+      <div class="team-role">Founder </div>
+      <p><a href="tel:+963933445400">+963 933410300</a></p>
+    </div>
+  </article>
+
+
+  <article class="team-card">
+    <div class="team-avatar">
+      <img src="ahwaz.jpg" alt="Ahwaz Deek" class="team-photo">   <!-- no crop -->
+    </div>
+    <div class="team-body">
+      <h4>Ahwaz Deek</h4>
+      <div class="team-role">Technical Support</div>
+      <p><a href="tel:+963988950293">+963 988950293</a></p>
+    </div>
+  </article>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section id="faq" class="section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="tag">FAQ</span>
+      <h2 id="faq-heading">Frequently Asked <span class="gradient-text">Questions</span></h2>
+      <p>Answers regarding technical testing, components, and project delivery schedules.</p>
+    </div>
+    <div class="faq-grid reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+          <span>What hydraulic testing services do you offer?</span>
+          <div class="faq-icon" aria-hidden="true">+</div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">We perform comprehensive tests including pump and motor efficiency metrics, valve leakage checks, cylinder load verification, and fluid particle contamination analysis per ISO 4406.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+          <span>Which brands do you supply and service?</span>
+          <div class="faq-icon" aria-hidden="true">+</div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">We are authorized distributors for ATOS, Chia Wang, Hoyea, and S&S Hydraulics, while fully capable of servicing components from other top manufacturers upon request.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+          <span>Can you design custom systems?</span>
+          <div class="faq-icon" aria-hidden="true">+</div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">Yes. Our engineering team handles complete schematic design, hydraulic manifold blocks, and custom power unit assemblies from scratch to finish.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+          <span>What is the typical turnaround time?</span>
+          <div class="faq-icon" aria-hidden="true">+</div>
+        </div>
+        <div class="faq-a">
+          <div class="faq-a-inner">Standard component repair and testing takes between 5 to 10 working days. Fast-track emergency protocols are also available for critical cases.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact" class="section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="tag" style="margin-bottom:16px; display:inline-flex;">Get in Touch</span>
+        <h2 id="contact-heading">Let's Build Something <span class="gradient-text">Precise</span></h2>
+        <p>Tell us about your technical specifications. Our engineers will respond within 24 hours.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 0;">
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-item-label">Workshop Address</div>
+              <div class="contact-item-val">Adra Industrial City - 2nd Engineering Sector 172 // Damascus, Syria</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📞</div>
+            <div>
+              <div class="contact-item-label">Phone / WhatsApp</div>
+              <div class="contact-item-val">+963933410300</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📧</div>
+            <div>
+              <div class="contact-item-label">Email Address</div>
+              <div class="contact-item-val">ayman.sbei@yahoo.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">🕔</div>
+            <div>
+              <div class="contact-item-label">Working Hours</div>
+              <div class="contact-item-val">Sat-Thu 10:00AM - 05:00PM | Emergency 24/7</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-2">
+        <h3 style="font-size:20px; font-weight:700; color:var(--text); margin-bottom:24px;">Request a Consultation</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="First Name" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Last Name" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="name@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="service">Required Service</label>
+          <select id="service">
+            <option value="">Select service...</option>
+            <option value="testing">Hydraulic Testing</option>
+            <option value="design">System Design & Engineering</option>
+            <option value="repair">Repair & Maintenance</option>
+            <option value="parts">Parts & Components Supply</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Project Details</label>
+          <textarea id="message" placeholder="Describe required standards, target pressure levels, or application requirements..."></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" style="width:100%; justify-content:center; padding:14px;" onclick="submitForm()">
+          Send Request
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA BANNER ═══════════ -->
+<section id="cta" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-card reveal">
+      <h2 id="cta-heading">Ready to Solve Your Hydraulic Challenges?</h2>
+      <p>From individual replacement parts to fully automated integrated systems.</p>
+      <div class="cta-actions">
+        <a href=gfq.html class="btn-white">Get a Free Quote</a>
+        <a href="tel:+963933410300" class="btn btn-ghost" style="color:var(--text); border-color:var(--border);">📞 Call Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" style="text-decoration:none;">
+          <div class="nav-logo-text">S&S Hydraulics</div>
+        </a>
+        <p>Specialized partner in hydraulic solutions engineering and component distribution.</p>
+        <div style="display:flex; gap:8px; margin-top:16px; flex-wrap:wrap;">
+          <span class="footer-badge">ISO 4413</span>
+          <span class="footer-badge">ISO 1219</span>
+          <span class="footer-badge">ISO 4406</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 style="margin-bottom: 15px !important; color: #ffffff; font-weight: 700;">SERVICES</h3>
+        <ul>
+          <li><a href="#services">Hydraulic Testing</a></li>
+          <li><a href="#services">Troubleshooting</a></li>
+          <li><a href="#services">Repair & Overhaul</a></li>
+		      <li><a href="#services">System Design</a></li>
+          <li><a href="#services">Testing</a></li>
+          <li><a href="#services">Parts & Components</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 style="margin-bottom: 15px !important; color: #ffffff; font-weight: 700;">PARTNERS</h3>
+        <ul>
+          <li><a href="#partners">ATOS</a></li>
+          <li><a href="#partners">Chia Wang</a></li>
+          <li><a href="#partners">S&S Hydraulics</a></li>
+		      <li><a href="#partners">Hystar</a></li>
+        </ul>
+      </div>
+<div class="footer-column">
+<h3 style="margin-bottom: 15px !important; color: #ffffff; font-weight: 700;">COMPANY</h3>
+  <ul style="list-style: none !important; padding: 0 !important; margin: 0 !important;">
+    <li style="margin-bottom: 10px !important;">
+      <a href="#team" style="color: #94a3b8 !important; text-decoration: none !important; font-size: 0.9rem;">Team</a>
+    </li>
+    <li style="margin-bottom: 10px !important;">
+      <a href="#faq" style="color: #94a3b8 !important; text-decoration: none !important; font-size: 0.9rem;">FAQ</a>
+    </li>
+    <li style="margin-bottom: 10px !important;">
+      <a href="#contact" style="color: #94a3b8 !important; text-decoration: none !important; font-size: 0.9rem;">Contact</a>
+    </li>
+    <li style="margin-bottom: 10px !important;">
+      <a href="terms.html" style="color: #94a3b8 !important; text-decoration: none !important; font-size: 0.9rem;">Terms & Conditions</a>
+    </li>
+    <li style="margin-bottom: 10px !important;">
+      <a href="privacy.html" style="color: #94a3b8 !important; text-decoration: none !important; font-size: 0.9rem;">Privacy Policy</a>
+    </li>
+    <li style="margin-bottom: 10px !important;">
+      <a href="cookies.html" style="color: #94a3b8 !important; text-decoration: none !important; font-size: 0.9rem;">Cookie Policy</a>
+    </li>
+  </ul>
+</div>
+    </div>
+<!-- FOOTER (English) -->
+<footer>
+  <div class="container">
+    <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;">
+      <p>© <span id="year">2026</span> S&S Hydraulics. All rights reserved.</p>
+      <p class="footer-credits">
+        Designed & Developed by 
+        <a href="https://instagram.com/sbei_studio_" target="_blank" rel="noopener" class="studio-credit-btn">
+          <span>Sbei Studio</span> ↗
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to Top">↑</button>
+
+<script
+ src="script.js" defer>
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow Control Valves | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="valveSearch" class="search-input" placeholder="Search flow control valves...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Flow Control Valves</h1>
+    <!-- Updated Link -->
+    <a href="valves.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Valves
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+    <table class="parts-table" id="valvesTable">
+      <thead><tr><th>Model Number</th><th>Brand</th><th>Description</th><th>Datasheet</th></tr></thead>
+      <tbody>
+        <tr><td class="model-name">QVHZO-TEB/TES, QVKZOR-TEB/TES</td><td>Atos</td><td>Direct, pressure compensated, off-board or on-board driver, without transducer, fieldbus or IO-Link</td><td><a href="pdfs/FS410.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">QVHZO-T, QVKZOR-T</td><td>Atos</td><td>Direct, pressure compensated, off-board driver, LVDT transducer</td><td><a href="pdfs/F412.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">QVHZO-A/AEB/AES, QVKZOR-A/AEB/AES</td><td>Atos</td><td>Direct, pressure compensated, off-board or on-board driver, without transducer, fieldbus or IO-Link</td><td><a href="pdfs/FS410 (1).pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">QVHZE-A, QVKZE-A</td><td>HYSTAR</td><td>Direct, pressure compensated, off-board driver, without transducer</td><td><a href="pdfs/F400.pdf" class="pdf-btn">View PDF</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<script>
+  const s = document.getElementById('valveSearch');
+  const r = document.querySelectorAll('#valvesTable tbody tr');
+  s.addEventListener('keyup', () => {
+    const f = s.value.toLowerCase();
+    r.forEach(row => row.style.display = row.textContent.toLowerCase().includes(f) ? '' : 'none');
+  });
+</script>
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+</body>
+</html>

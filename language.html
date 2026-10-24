@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Language | S&S Hydraulics</title>
+  
+  <!-- Modern Fonts for English and Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── RESET & BASE ─── */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #081220; /* Deep corporate navy/black */
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(37, 99, 235, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.05), transparent 25%);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    /* ─── CONTAINER & GLASSMORPHISM CARD ─── */
+    .selection-wrapper {
+      width: 100%;
+      max-width: 480px;
+      padding: 24px;
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 48px 40px;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ─── BRANDING ─── */
+    .brand-logo {
+      margin-bottom: 32px;
+    }
+
+    .brand-logo img {
+      height: 48px;
+      width: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ─── TYPOGRAPHY ─── */
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: #F8FAFC;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #94A3B8;
+      margin-bottom: 40px;
+    }
+
+    /* ─── BUTTONS ─── */
+    .options-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 18px 24px;
+      text-decoration: none;
+      border-radius: 16px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+    }
+
+    .lang-btn .content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1;
+    }
+
+    .lang-btn .arrow {
+      opacity: 0.5;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+
+    /* English Button (Blue Theme) */
+    .english {
+      background: rgba(37, 99, 235, 0.1);
+      color: #F1F5F9;
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+
+    .english:hover {
+      background: rgba(37, 99, 235, 0.2);
+      border-color: #3B82F6;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Arabic Button (Gold Theme) */
+    .arabic {
+      background: rgba(245, 158, 11, 0.1);
+      color: #F1F5F9;
+      border-color: rgba(245, 158, 11, 0.3);
+      font-family: 'Cairo', sans-serif;
+      font-size: 1.2rem; /* Slightly larger for Arabic script clarity */
+    }
+
+    .arabic:hover {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: #F59E0B;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.25);
+    }
+
+    .lang-btn:hover .arrow {
+      opacity: 1;
+      transform: translateX(4px);
+    }
+
+    .arabic:hover .arrow {
+      transform: translateX(-4px); /* Reverse arrow movement for RTL */
+    }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 480px) {
+      .card {
+        padding: 40px 24px;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="selection-wrapper">
+    <div class="card">
+      
+      <!-- Company Logo Integration -->
+      <div class="brand-logo">
+        <img src="logo.jpg" alt="S&S Hydraulics Logo">
+      </div>
+
+      <h1>Choose Your Language</h1>
+      <p class="subtitle">Select your preferred language to continue</p>
+
+      <div class="options-grid">
+        <!-- English Option -->
+        <a class="lang-btn english" href="index.html" aria-label="Select English">
+          <div class="content">
+            <span>English (US)</span>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <!-- Arabic Option -->
+        <a class="lang-btn arabic" href="arabic.html" aria-label="Select Arabic" dir="rtl">
+          <div class="content">
+            <span>العربية (SY)</span>
+          </div>
+          <span class="arrow">←</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

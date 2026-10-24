@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pressure Switches | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Paste your standard CSS here */
+</style>
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'CHIA WANG', 'Adjustable', 'NO/NC')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Pressure Switches</h1>
+    <!-- Updated Link -->
+    <a href="accessories.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accessories
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model-name">HS-PS-A100</td>
+          <td>HYSTAR</td>
+          <td>Adjustable Diaphragm Pressure Switch, 10-100 Bar Range, SPDT Contacts</td>
+          <td><a href="pdfs/hystar-ps-a100.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">E-PS-MAP-210</td>
+          <td>ATOS</td>
+          <td>Piston-Type Electronic Pressure Switch, Fixed or Variable Hysteresis</td>
+          <td><a href="pdfs/atos-eps-map.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HY-PS-V250</td>
+          <td>HOYEA</td>
+          <td>High-Pressure Switch, Visual Adjustment Scale, 50-250 Bar Limits</td>
+          <td><a href="pdfs/hoyea-ps-v250.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">CW-PS-N150</td>
+          <td>CHIA WANG</td>
+          <td>Compact Inline Pressure Switch, Normally Open/Normally Closed Auto Preset</td>
+          <td><a href="pdfs/chiawang-cwps-150.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proportional Valves | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="valveSearch" class="search-input" placeholder="Search proportional valves...">
+  </div>
+</header>
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Proportional Valves</h1>
+    <!-- Updated Link -->
+    <a href="valves.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Valves
+    </a>
+  </div>
+</section>
+<section id="types">
+  <div class="container">
+    <table class="parts-table" id="valvesTable">
+      <thead><tr><th>Model Number</th><th>Brand</th><th>Description</th><th>Datasheet</th></tr></thead>
+      <tbody>
+        <tr><td class="model-name">EVSV08-20</td><td>Chia Wang</td><td>EVSV Series Proportional Check Valve</td><td><a href="pdfs/EVSV08-20-.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">EVSV08-28</td><td>Chia Wang</td><td>EVSV Series Proportional Check Valve</td><td><a href="pdfs/EVSV08-28-.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">EVEP-12</td><td>Chia Wang</td><td>Non Compensated Flow Regulators</td><td><a href="pdfs/EVEP-12-.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">EVBP-10</td><td>Chia Wang</td><td>Proportional Reducing Valves</td><td><a href="pdfs/EVBP-10-.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+<tr><td class="model-name">EVBP-12</td><td>Chia Wang</td><td>Proportional Reducing Valves</td><td><a href="pdfs/EVBP-12_1140703.pdf" class="pdf-btn">View PDF</a></td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+<script>
+  const s = document.getElementById('valveSearch');
+  const r = document.querySelectorAll('#valvesTable tbody tr');
+  s.addEventListener('keyup', () => {
+    const f = s.value.toLowerCase();
+    r.forEach(row => row.style.display = row.textContent.toLowerCase().includes(f) ? '' : 'none');
+  });
+</script>
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oil Coolers | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Paste your standard CSS here */
+</style>
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'HOYEA', '12V DC', 'Air-Cooled')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div clasSs="hero-content">
+    <h1>Oil Coolers</h1>
+    <!-- Updated Link -->
+    <a href="accessories.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accessories
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model-name">HS-OC-12V-A</td>
+          <td>HYSTAR</td>
+          <td>Mobile Air Oil Cooler, 12V DC High-Flow Fan, 15 GPM Rating</td>
+          <td><a href="pdfs/hystar-oc-12v.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">E-OC-AC220</td>
+          <td>ATOS</td>
+          <td>Industrial Air Cooler, 220V/380V AC Three-Phase Fan Motor</td>
+          <td><a href="pdfs/atos-eoc-ac.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HY-OC-M20</td>
+          <td>HOYEA</td>
+          <td>Compact Aluminum Matrix Oil Cooler, Fan-less OEM Core variant</td>
+          <td><a href="pdfs/hoyea-oc-m20.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">CW-OC-24V-B</td>
+          <td>CHIA WANG</td>
+          <td>Heavy Duty Machinery Oil Cooler, 24V DC Fan with Thermal Switch</td>
+          <td><a href="pdfs/chiawang-cwoc-24v.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic Power Units | S&S Hydraulics</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container nav-inner">
+
+    <ul class="nav-links">
+
+      <li><a href="#overview">Overview</a></li>
+
+      <li class="dropdown">
+        <a href="#types">Types ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="#types">ASA, ASJ, ASM</a></li>
+          <li><a href="#types">ASH</a></li>
+          <li><a href="#types">Custom Power Units</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Hydraulic Power Units</h1>
+    <!-- Updated Link -->
+    <a href="index.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Homepage
+    </a>
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="container">
+    <h2>Overview</h2>
+
+    <p>
+      Hydraulic power units generate the hydraulic power required to operate hydraulic systems by combining a motor, pump, reservoir and control components.
+    </p>
+
+    <p>
+      S&S Hydraulics supplies reliable hydraulic power units for industrial, mobile and custom applications.
+    </p>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+
+    <h2>Power Unit Types</h2>
+
+    <div class="types-grid">
+      <!-- 1st Power Unit -->
+      <div class="card">
+        <img src="asa.jpg" alt="ASA, ASJ, ASM Power Unit">
+        <h3>ASA, ASJ, ASM</h3>
+        <p><strong>Brand:</strong> <span style="color: orange; font-weight: bold;">Atos</p>
+        <p>Custom hydraulic power units with horizontal or vertical motor. Optional heat exchangers, control instruments, PED certification.</p>
+        <a href=pdfs/L050.pdf target="_blank" class="pdf-btn">View PDF</a>
+      </div>
+      
+      <!-- 2nd Power Unit -->
+      <div class="card">
+        <img src="ash.jpg" alt="ASH Power Unit">
+        <h3>ASH</h3>
+        <p><strong>Brand:</strong> <span style="color: orange; font-weight: bold;">Atos</p>
+        <p>Standard hydraulic power unit, tank size up to 100 lt and installed power up to 7,5kw. Optional heat exchanger air/oil or water/oil.</p>
+        <a href=pdfs/L020.pdf target="_blank" class="pdf-btn">View PDF</a>
+      </div>
+      
+      <!-- 3rd Power Unit -->
+      <div class="card">
+        <img src="PowerUnitIN-300Wx300H.jpg" alt="Custom Power Unit">
+        <h3>Custom Power Units</h3>
+        <p><strong>Brand:</strong> <span style="color: orange; font-weight: bold;">Atos</p>
+        <p>Industrial hydraulic power units on customer specification. <span style="color: red; font-weight: bold;">(Availability and price only on request)</span></p>
+        <a href=pdfs/TL100.pdf target="_blank" class="pdf-btn">View PDF</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands">
+  <div class="container">
+
+    <h2>Our Brands</h2>
+
+    <div class="brand-grid">
+
+<a href="https://www.hoyea.com/" target="_blank" class="brand-link">
+    <div class="brand">
+        <h3>HOYEA</h3>
+    </div>
+</a>
+
+<a href="https://www.chiawang.com.tw/" target="_blank" class="brand-link">
+    <div class="brand">
+        <h3>CHIA WANG</h3>
+    </div>
+</a>
+
+<a href="https://www.hystar.com.tw/" target="_blank" class="brand-link">
+    <div class="brand">
+        <h3>HYSTAR</h3>
+    </div>
+</a>
+
+<a href="https://www.atos.com/" target="_blank" class="brand-link">
+    <div class="brand">
+        <h3>ATOS</h3>
+    </div>
+</a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+
+    <h2>FAQ</h2>
+
+<div class="faq-item">
+  <div class="faq-question">What is a hydraulic power unit?</div>
+
+  <div class="faq-answer">
+    It supplies hydraulic power to machines and equipment.
+  </div>
+</div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I choose the correct power unit?</div>
+      <div class="faq-answer">
+        Based on flow, pressure, motor power, and application.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can power units be customized?</div>
+      <div class="faq-answer">
+        Yes. We can provide customized hydraulic power unit solutions.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+
+    <h2>Need Assistance?</h2>
+
+    <p>Phone: +963933410300</p>
+    <p>Email: sales@sshydraulics.com</p>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const answer = item.querySelector(".faq-answer");
+    if (!answer) return;
+
+    answer.style.display =
+      answer.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+</body>
+</html>

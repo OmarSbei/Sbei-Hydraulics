@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydraulic Accessories | S&S Hydraulics</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li class="dropdown">
+        <a href="#types">Accessories ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="gauges.html">Pressure Gauges</a></li>
+          <li><a href="filters.html">Filters</a></li>
+          <li><a href="exchangers.html">Heat Exchangers</a></li>
+          <li><a href="fittings.html">Fittings</a></li>
+          <li><a href="switches.html">Switches</a></li>
+          <li><a href="coolers.html">Oil Coolers</a></li>
+        </ul>
+      </li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Hydraulic Accessories</h1>
+    <!-- Updated Link -->
+    <a href="index.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Homepage
+    </a>
+  </div>
+</section>
+
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="container">
+    <h2>Overview</h2>
+    <p>Hydraulic accessories are critical for system longevity, safety, and efficiency, providing necessary monitoring and connection points for your equipment.</p>
+    <p>S&S Hydraulics provides a wide range of reliable accessory components to ensure your hydraulic systems operate at peak performance.</p>
+  </div>
+</section>
+
+<!-- TYPES (GRID) -->
+<section id="types">
+  <div class="container">
+    <div class="types-grid">
+      <div class="card"><img src="gauges.jpg" alt="Pressure Gauges"><h3>Pressure Gauges</h3><a href="gauges.html" class="pdf-btn">View Details</a></div>
+      <div class="card"><img src="filters.jpg" alt="Filters"><h3>Filters</h3><a href="filters.html" class="pdf-btn">View Details</a></div>
+      <div class="card"><img src="exchangers.jpg" alt="Heat Exchangers"><h3>Heat Exchangers</h3><a href="heat-exchangers.html" class="pdf-btn">View Details</a></div>
+           <div class="card"><img src="switches.jpg" alt="Switches"><h3>Switches</h3><a href="switches.html" class="pdf-btn">View Details</a></div>
+      <div class="card"><img src="coolers.jpg" alt="Oil Coolers"><h3>Oil Coolers</h3><a href="oil-coolers.html" class="pdf-btn">View Details</a></div>
+ <div class="card"><img src="fluid level.jpg" alt="Fluid Level & Thermometer (temperature Gauges"><h3>Fluid Level & Thermometer (temperature Gauges</h3><a href="Fluid Level.html" class="pdf-btn">View Details</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section id="brands">
+  <div class="container">
+    <h2>Our Brands</h2>
+    <div class="brand-grid">
+      <a href="https://www.hoyea.com/" target="_blank" class="brand-link"><div class="brand"><h3>HOYEA</h3></div></a>
+      <a href="https://www.chiawang.com.tw/" target="_blank" class="brand-link"><div class="brand"><h3>CHIA WANG</h3></div></a>
+      <a href="https://www.hystar.com.tw/" target="_blank" class="brand-link"><div class="brand"><h3>HYSTAR</h3></div></a>
+      <a href="https://www.atos.com/" target="_blank" class="brand-link"><div class="brand"><h3>ATOS</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-question">Why are hydraulic accessories important?</div>
+      <div class="faq-answer">They protect the system from contamination, monitor critical pressure levels, and manage thermal efficiency.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How often should filters be replaced?</div>
+      <div class="faq-answer">Replacement frequency depends on system usage and environment; we recommend regular monitoring of pressure differential indicators.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2>Need Assistance?</h2>
+    <p>Phone: +963933410300</p>
+    <p>Email: sales@sshydraulics.com</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2025 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll(".faq-item").forEach(item => {
+  item.addEventListener("click", () => {
+    const answer = item.querySelector(".faq-answer");
+    if (!answer) return;
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+</body>
+</html>

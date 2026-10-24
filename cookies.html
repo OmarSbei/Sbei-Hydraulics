@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy | S&S Hydraulics</title>
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg, #0f172a); color: var(--text, #f8fafc); }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .gradient-text { background: linear-gradient(to right, var(--blue, #3b82f6), var(--blue-light, #60a5fa)); -webkit-background-clip: text; color: transparent; }
+    .tag { color: var(--blue-light, #60a5fa); font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
+    .btn { background: var(--blue, #3b82f6); color: #fff; padding: 10px 20px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; }
+    
+    /* Chat Modal Styles */
+    .chat-modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: all 0.25s ease; }
+    .chat-modal-overlay.active { opacity: 1; pointer-events: auto; }
+    .chat-modal-box { width: 90%; max-width: 380px; background: var(--surface, #1e293b); border: 1px solid var(--border, #334155); border-radius: 12px; transform: scale(0.95) translateY(10px); transition: all 0.25s ease; display: flex; flex-direction: column; overflow: hidden; }
+    .chat-modal-overlay.active .chat-modal-box { transform: scale(1) translateY(0); }
+    .chat-header { padding: 16px 20px; background: var(--blue, #3b82f6); color: #ffffff; display: flex; justify-content: space-between; align-items: center; }
+    .chat-header h4 { margin: 0; font-size: 15px; }
+    .chat-close { background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+    .chat-body { padding: 20px; height: 250px; overflow-y: auto; background: var(--bg, #0f172a); }
+    .chat-message.bot { background: var(--surface, #1e293b); padding: 14px; border-radius: 8px; font-size: 14px; border: 1px solid var(--border, #334155); }
+    .chat-input-area { padding: 16px; border-top: 1px solid var(--border, #334155); display: flex; gap: 10px; background: var(--surface, #1e293b); }
+    .chat-input-area input { flex: 1; background: var(--bg, #0f172a); border: 1px solid var(--border, #334155); color: var(--text, #fff); border-radius: 6px; padding: 10px; }
+  </style>
+</head>
+<body>
+
+  <nav style="padding: 20px 0; border-bottom: 1px solid var(--border, #334155); background: var(--surface, #1e293b);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html"><img src="logo.jpg" alt="S&S Hydraulics Logo" style="height: 40px; display: block;"></a>
+      <div style="display: flex; gap: 20px; align-items: center;">
+        <a href="index.html" style="color: var(--text, #fff); text-decoration: none; font-weight: 500;">Home
+       </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 60px; padding-bottom: 60px; min-height: 80vh;">
+    <div class="container" style="max-width: 900px;">
+      
+      <div style="margin-bottom: 40px;">
+        <span class="tag">Legal Documentation</span>
+        <h1 style="font-size: clamp(36px, 5vw, 52px); font-weight: 900; margin: 16px 0 24px;">
+          Cookie <span class="gradient-text">Policy</span>
+        </h1>
+        <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; padding: 8px 16px; background: var(--surface, #1e293b); border: 1px solid var(--border, #334155); border-radius: 100px;">
+          Last Updated: July 2026
+        </div>
+      </div>
+
+      <div style="background: var(--surface, #1e293b); border: 1px solid var(--border, #334155); border-radius: 16px; padding: clamp(32px, 5vw, 56px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);">
+        <div style="line-height: 1.85; font-size: 16px; display: flex; flex-direction: column; gap: 32px;">
+          
+          <p style="font-size: 18px; font-weight: 500;">This Cookie Policy explains how S&S Hydraulics uses cookies and similar technologies to recognize you when you visit our website.</p>
+          
+          <div>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+              <span style="color: var(--blue, #3b82f6); font-size: 24px;">01.</span> What are Cookies?
+            </h3>
+            <p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work efficiently and provide tracking information to site owners.</p>
+          </div>
+          
+          <div style="width: 100%; height: 1px; background: var(--border, #334155);"></div>
+
+          <div>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+              <span style="color: var(--blue, #3b82f6); font-size: 24px;">02.</span> How We Use Cookies
+            </h3>
+            <p>We use cookies primarily to save your preferences, such as your Light/Dark mode theme selection, and to understand how visitors interact with our site so we can improve the user interface.</p>
+          </div>
+
+          <div style="width: 100%; height: 1px; background: var(--border, #334155);"></div>
+          
+          <div>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 20px; display: flex; align-items: center; gap: 12px;">
+              <span style="color: var(--blue, #3b82f6); font-size: 24px;">03.</span> Manage Your Cookie Preferences
+            </h3>
+            <p style="margin-bottom: 24px; font-size: 15px;">You can customize your cookie settings below at any time. Essential cookies cannot be disabled as they are required for basic site functionality.</p>
+            
+            <!-- Embedded Cookie Settings Panel -->
+            <div style="background: var(--bg, #0f172a); border: 1px solid var(--border, #334155); border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 20px;">
+              
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--border, #334155); padding-bottom: 16px;">
+                <div>
+                  <strong style="display: block; font-size: 15px; margin-bottom: 4px;">Essential Cookies</strong>
+                  <span style="font-size: 13px; color: var(--text-2, #cbd5e1); line-height: 1.4;">Required for core website security, session management, and basic functionality.</span>
+                </div>
+                <input type="checkbox" checked disabled style="cursor: not-allowed; margin-top: 4px; transform: scale(1.2);">
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--border, #334155); padding-bottom: 16px;">
+                <div>
+                  <strong style="display: block; font-size: 15px; margin-bottom: 4px;">Preference Cookies</strong>
+                  <span style="font-size: 13px; color: var(--text-2, #cbd5e1); line-height: 1.4;">Allows the website to remember choices you make (such as your UI theme preference).</span>
+                </div>
+                <input type="checkbox" id="prefCookies" checked style="margin-top: 4px; cursor: pointer; transform: scale(1.2);">
+              </div>
+
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                  <strong style="display: block; font-size: 15px; margin-bottom: 4px;">Analytics Cookies</strong>
+                  <span style="font-size: 13px; color: var(--text-2, #cbd5e1); line-height: 1.4;">Helps us understand how visitors interact with the site via Google Search Console and analytics tools.</span>
+                </div>
+                <input type="checkbox" id="analyticsCookies" checked style="margin-top: 4px; cursor: pointer; transform: scale(1.2);">
+              </div>
+
+              <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+                <button onclick="saveEmbeddedPreferences()" class="btn" style="padding: 10px 20px; font-size: 14px;">Save Preferences</button>
+              </div>
+            </div>
+          </div>
+
+          <div style="width: 100%; height: 1px; background: var(--border, #334155);"></div>
+
+          <div>
+            <h3 style="font-size: 22px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
+              <span style="color: var(--blue, #3b82f6); font-size: 24px;">04.</span> Browser Controls
+            </h3>
+            <p>You also have the right to decide whether to accept or reject cookies through your web browser controls. If you choose to reject cookies globally, some site functionality may be restricted.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding: 40px 0; border-top: 1px solid var(--border, #334155); background: var(--surface, #1e293b); text-align: center;">
+    <div class="container">
+      <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+        <a href="privacy.html" style="color: var(--text, #fff); text-decoration: none; font-size: 14px;">Privacy Policy</a>
+        <a href="terms.html" style="color: var(--text, #fff); text-decoration: none; font-size: 14px;">Terms of Service</a>
+        <a href="cookies.html" style="color: var(--text, #fff); text-decoration: none; font-size: 14px;">Cookie Policy</a>
+      </div>
+      <p style="color: var(--text-2, #cbd5e1); font-size: 14px; margin: 0;">&copy; 2026 S&S Hydraulics. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chat Modal Popup -->
+  <div id="chatModal" class="chat-modal-overlay">
+    <div class="chat-modal-box">
+      <div class="chat-header">
+        <h4>Engineering Support</h4>
+        <button class="chat-close" onclick="closeChatModal()">&times;</button>
+      </div>
+      <div class="chat-body">
+        <div class="chat-message bot">
+          Hello! I'm an engineering assistant for S&S Hydraulics. How can I help you with your systems today?
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" placeholder="Type your message..." id="chatInput">
+        <button class="btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openChatModal() { document.getElementById('chatModal').classList.add('active'); }
+    function closeChatModal() { document.getElementById('chatModal').classList.remove('active'); }
+    window.addEventListener('click', function(e) {
+      if (e.target === document.getElementById('chatModal')) { closeChatModal(); }
+    });
+
+    // Load saved preferences on page load if they exist
+    document.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('ss_cookie_consent');
+      if (saved) {
+        try {
+          const consent = JSON.parse(saved);
+          document.getElementById('prefCookies').checked = !!consent.preferences;
+          document.getElementById('analyticsCookies').checked = !!consent.analytics;
+        } catch (e) {}
+      }
+    });
+
+    function saveEmbeddedPreferences() {
+      const consent = {
+        essential: true,
+        preferences: document.getElementById('prefCookies').checked,
+        analytics: document.getElementById('analyticsCookies').checked
+      };
+      localStorage.setItem('ss_cookie_consent', JSON.stringify(consent));
+      alert('Your cookie preferences have been saved successfully!');
+    }
+  </script>
+</body>
+</html>

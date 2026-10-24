@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vane Motors | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .parts-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+  .parts-table th { background-color: #333; color: #fff; padding: 15px; text-align: left; }
+  .parts-table td { padding: 15px; border-bottom: 1px solid #ddd; color: #333; }
+  .parts-table tr:hover { background-color: #f9f9f9; }
+  .model-name { font-weight: bold; color: #0056b3; }
+  .search-header { background-color: #222; padding: 20px 0; text-align: center; position: sticky; top: 0; z-index: 100; }
+  .search-input { width: 90%; max-width: 600px; padding: 12px 25px; font-size: 16px; border: none; border-radius: 30px; outline: none; }
+</style>
+</head>
+<body>
+
+<header class="search-header">
+  <div class="container"><input type="text" id="partSearch" class="search-input" placeholder="Search vane motors..."></div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Hydraulic Vane Motors</h1>
+    <!-- Updated Link -->
+    <a href="pumps-motors.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Pumps & Motors
+    </a>
+  </div>
+</section>
+
+<section class="container" style="padding: 40px 0;">
+  <table class="parts-table" id="partsTable">
+    <thead>
+      <tr><th>Model Number</th><th>Brand</th><th>Motor</th><th>HP</th><th>Datasheet</th></tr>
+    </thead>
+    <tbody>
+<tr><td class="model-name">SMVP-*-*-1-*</td><td>Chia Wang</td><td>1HP/ 4P3∅ 380/ 50Hz</td><td>1 Hp</td><td><a href="pdfs/SMVP-1_SMNP-2.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+
+
+    </tbody>
+  </table>
+</section>
+
+<script>
+  document.getElementById('partSearch').addEventListener('keyup', function() {
+    const filter = this.value.toLowerCase();
+    document.querySelectorAll('#partsTable tbody tr').forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

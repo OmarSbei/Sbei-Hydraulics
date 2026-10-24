@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piston Accumulators | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* Table Styles */
+  .parts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .parts-table th {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: left;
+  }
+  .parts-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333; 
+  }
+  .parts-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  .model-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3; 
+  }
+
+  /* Search Bar Styles */
+  .search-header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .search-input {
+    width: 90%;
+    max-width: 600px;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="accumulatorSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'ATOS', 'High-Speed', 'HIDROS')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Piston Accumulators</h1>
+    <!-- Updated Link -->
+    <a href="accumulators.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accumulators
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+
+    
+    <table class="parts-table" id="accumulatorsTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="model-name">E-PA-05/350</td>
+          <td>ATOS</td>
+          <td>Premium Piston Accumulator, 5 Liters, 350 bar Max Pressure, Low-Friction Design</td>
+          <td><a href="pdfs/atos-epa-05.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">E-PA-20/250</td>
+          <td>ATOS</td>
+          <td>Premium Piston Accumulator, 20 Liters, 250 bar, Polyurethane Seal kit</td>
+          <td><a href="pdfs/atos-epa-20.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">HPA-10-400</td>
+          <td>HIDROS</td>
+          <td>Heavy-Duty Piston Accumulator, 10 Liters, 400 bar High Pressure Series</td>
+          <td><a href="pdfs/hidros-hpa-10.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">HS-PA-04-D</td>
+          <td>HYSTAR</td>
+          <td>Piston Accumulator, 4 Liters, Double-Sealed System for Leakage Prevention</td>
+          <td><a href="pdfs/hystar-hspa-04.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">CW-PA-15-B</td>
+          <td>CHIA WANG</td>
+          <td>Piston Type Accumulator, 15 Liters, Honed Bore Internal Finish</td>
+          <td><a href="pdfs/chiawang-cwpa-15.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+        <tr>
+          <td class="model-name">E-PA-HS-10/350</td>
+          <td>ATOS</td>
+          <td>High-Speed Piston Accumulator, Lightweight Aluminum Piston for Fast Cycling</td>
+          <td><a href="pdfs/atos-epahs-10.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">HPA-MAG-30-350</td>
+          <td>HIDROS</td>
+          <td>Proximity Sensor Equipped Piston Model, Built-in Magnetic Target Trackers</td>
+          <td><a href="pdfs/hidros-hpamag-30.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('accumulatorSearch');
+  const tableRows = document.querySelectorAll('#accumulatorsTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vane Pumps | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .parts-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+  .parts-table th { background-color: #333; color: #fff; padding: 15px; text-align: left; }
+  .parts-table td { padding: 15px; border-bottom: 1px solid #ddd; color: #333; }
+  .parts-table tr:hover { background-color: #f9f9f9; }
+  .model-name { font-weight: bold; color: #0056b3; }
+  .search-header { background-color: #222; padding: 20px 0; text-align: center; position: sticky; top: 0; z-index: 100; }
+  .search-input { width: 90%; max-width: 600px; padding: 12px 25px; font-size: 16px; border: none; border-radius: 30px; outline: none; }
+</style>
+</head>
+<body>
+
+<header class="search-header">
+  <div class="container"><input type="text" id="partSearch" class="search-input" placeholder="Search vane pumps..."></div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Hydraulic Vane Pumps</h1>
+    <!-- Updated Link -->
+    <a href="pumps-motors.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Pumps & Motors
+    </a>
+  </div>
+</section>
+
+<section class="container" style="padding: 40px 0;">
+  <table class="parts-table" id="partsTable">
+    <thead>
+      <tr><th>Model Number</th><th>Brand</th><th>Displacement (L/min)</th><th>Speed (Max)</th><th>Datasheet</th></tr>
+    </thead>
+    <tbody>
+ <tr><td class="model-name">VPVC-F12-※-10</td><td>Chia Wang</td><td>12</td><td>1800 rpm</td><td><a href="pdfs/VPVC_new_.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+<tr><td class="model-name">VPCC-F12-※-12-※-10</td><td>Chai Wang</td><td>12</td><td>1800 rpm</td><td><a href="pdfs/VPCC_new_.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+<tr><td class="model-name">VPVCG-F25-※-PA-10</td><td>Chia Wang</td><td>HGP-2A 2-12</td><td>1800 rpm</td><td><a href="pdfs/VPVCG_new_.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+<tr><td class="model-name">VDC-F20-※※-10</td><td>Chai Wang</td><td>20</td><td>1800 rpm</td><td><a href="pdfs/VDC_new_.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+<tr><td class="model-name">VPNC-07</td><td>Chai Wang</td><td>13.5</td><td>1800 rpm</td><td><a href="pdfs/VPNC-2.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+<tr><td class="model-name">PV2R1-06</td><td>Chai Wang</td><td>11.2</td><td>1800 rpm</td><td><a href="pdfs/PV2R.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+<tr><td class="model-name">PV2R12</td><td>Chai Wang</td><td>10.8</td><td>1800 rpm</td><td><a href="pdfs/PV2R12-1.pdf" class="pdf-btn" download>View PDF</a></td></tr>
+
+    </tbody>
+  </table>
+</section>
+
+<script>
+  document.getElementById('partSearch').addEventListener('keyup', function() {
+    const filter = this.value.toLowerCase();
+    document.querySelectorAll('#partsTable tbody tr').forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(filter) ? '' : 'none';
+    });
+  });
+</script>
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

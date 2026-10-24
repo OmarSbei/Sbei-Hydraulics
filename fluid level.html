@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluid Level & Temperature Gauges | S&S Hydraulics</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="search-header">
+  <div class="container">
+    <input type="text" id="gaugeSearch" class="search-input" placeholder="Search by model, brand, or specs (e.g., 'Atos', 'Visual level', 'Thermometer')...">
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Fluid Level & Temperature Gauges</h1>
+    <!-- Updated Link -->
+    <a href="accessories.html" class="btn btn-secondary btn-back">
+      <span class="arrow">←</span> Return to Accessories
+    </a>
+  </div>
+</section>
+
+<section id="types">
+  <div class="container">
+  
+    <table class="parts-table" id="gaugesTable">
+      <thead>
+        <tr>
+          <th>Model Number</th>
+          <th>Brand</th>
+          <th>Description</th>
+          <th>Datasheet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model-name">LV-76</td>
+          <td>Atos</td>
+          <td>Visual fluid level indicator, center distance 76mm, with thermometer probe.</td>
+          <td><a href="pdfs/LV076.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">LV-127</td>
+          <td>Atos</td>
+          <td>Visual fluid level indicator, center distance 127mm, dual scale Celsius/Fahrenheit thermometer.</td>
+          <td><a href="pdfs/LV127.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">LV-254</td>
+          <td>Atos</td>
+          <td>High capacity visual level gauge, center distance 254mm, robust protective shield.</td>
+          <td><a href="pdfs/LV254.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">T-150</td>
+          <td>Chia Wang</td>
+          <td>Dial thermometer and level gauge, rear connection, brass thermowell.</td>
+          <td><a href="pdfs/G80_Acces.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+        <tr>
+          <td class="model-name">ELV-127</td>
+          <td>S&S Standard</td>
+          <td>Electrical fluid level switch with integrated temperature sensor option.</td>
+          <td><a href="pdfs/ELV127.pdf" class="pdf-btn" download>View PDF</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 S&S Hydraulics. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('gaugeSearch');
+  const tableRows = document.querySelectorAll('#gaugesTable tbody tr');
+
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toLowerCase();
+    tableRows.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      if (rowText.includes(filter)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
