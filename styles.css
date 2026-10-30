@@ -1052,3 +1052,12 @@ a, button, input, select, textarea, .btn, .faq-q, .hamburger {
     background: rgba(12, 14, 20, 0.98);
   }
 }
+/* Compact mobile language switcher styling */
+@media (max-width: 1023px) {
+  .nav-actions .lang-btn {
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+    border-radius: 4px !important;
+    gap: 3px !important;
+  }
+}
